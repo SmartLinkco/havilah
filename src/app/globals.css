@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-green-100: #e3eee6;
+  --color-green-700: #1e5631;
+  --color-green-900: #143d22;
+  --color-gold-100: #f6eed6;
+  --color-gold-500: #c9a13b;
+  --color-gold-700: #9c7a22;
+  --color-soil-400: #a9744f;
+  --color-soil-700: #6b4a2e;
+  --color-cream: #f7f3ea;
+  --color-ink: #1b1f1a;
+  --font-sans: var(--font-inter), Inter, system-ui, sans-serif;
+  --font-heading: var(--font-montserrat), Montserrat, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  background: #f7f3ea;
+  color: #1b1f1a;
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+:focus-visible {
+  outline: 2px solid #1e5631;
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  z-index: 80;
+  transform: translateY(-120%);
+  border-radius: 0.5rem;
+  background: #1e5631;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  transform: translateY(0.75rem);
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #6b4a2e;
+}
+
+.btn {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  padding: 0.7rem 1.25rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.btn-primary {
+  background: #1e5631;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #143d22;
+}
+
+.btn-secondary {
+  border: 1.5px solid #1e5631;
+  color: #1e5631;
+  background: transparent;
+}
+
+.btn-secondary:hover {
+  background: #e3eee6;
+}
+
+.btn-gold {
+  background: #c9a13b;
+  color: #1b1f1a;
+}
+
+.btn-gold:hover {
+  background: #9c7a22;
+  color: #1b1f1a;
+}
+
+.field {
+  width: 100%;
+  min-height: 3rem;
+  border-radius: 0.75rem;
+  border: 1px solid #d7cfc2;
+  background: #fff;
+  padding: 0.7rem 0.9rem;
+  font-size: 1rem;
+  color: #1b1f1a;
+}
+
+.field[aria-invalid="true"] {
+  border-color: #6b4a2e;
+}
+
+.photo-tile {
+  background-color: #e3eee6;
+  background-image: url("/brand/mark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: min(46%, 180px);
+}
+
+#inquiry,
+#quote,
+#main {
+  scroll-margin-top: 5.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
