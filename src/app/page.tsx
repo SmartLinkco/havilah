@@ -40,7 +40,7 @@ export default function HomePage() {
               <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/90">{visitorCopy(home.lede)}</p>
             ) : null}
             <div className="pointer-events-auto mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link href={`${pages.contact.path}#inquiry`} className="btn btn-primary">
+              <Link href={pages.enquiry.path} className="btn btn-primary">
                 {cta.inquiry}
               </Link>
               <Link href={pages.farm.path} className="btn btn-hero">

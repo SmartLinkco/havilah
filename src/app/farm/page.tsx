@@ -1,10 +1,8 @@
-import { InquiryForm } from "@/components/InquiryForm";
+import { LegacyEnquiryRedirect } from "@/components/LegacyEnquiryRedirect";
 import { PageHero } from "@/components/PageHero";
 import { PageTransition } from "@/components/PageTransition";
 import { ProductGroups } from "@/components/ProductGroups";
-import { Reveal } from "@/components/Reveal";
 import { produceIntro } from "@/content/produce";
-import { forms } from "@/content/contact";
 import { pages } from "@/content/site";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -17,14 +15,10 @@ export const metadata = pageMetadata({
 export default function FarmPage() {
   return (
     <PageTransition>
+      <LegacyEnquiryRedirect hashes={["#quote"]} />
       <PageHero eyebrow={produceIntro.eyebrow} title={produceIntro.title} lede={produceIntro.lede} />
       <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
         <ProductGroups />
-      </section>
-      <section className="mx-auto max-w-3xl px-5 py-16 sm:px-8">
-        <Reveal>
-          <InquiryForm copy={forms.quote} />
-        </Reveal>
       </section>
     </PageTransition>
   );

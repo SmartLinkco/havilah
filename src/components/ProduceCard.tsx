@@ -12,7 +12,7 @@ function whatsappOrderHref(productName: string) {
 
 export function ProduceCard({ product }: { product: ProduceItem }) {
   const description = visitorCopy(product.description);
-  const quoteHref = `${pages.contact.path}?product=${product.id}#inquiry`;
+  const quoteHref = `${pages.enquiry.path}?product=${product.id}`;
 
   return (
     <article className="lift-card flex h-full flex-col overflow-hidden rounded-2xl border border-green-100 bg-white shadow-sm">

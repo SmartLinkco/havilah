@@ -14,7 +14,7 @@ export function CtaBand() {
             <p className="mt-4 text-lg leading-relaxed text-green-100">{visitorCopy(home.ctaText)}</p>
           ) : null}
         </div>
-        <Link href={`${pages.contact.path}#inquiry`} className="btn btn-gold">
+        <Link href={pages.enquiry.path} className="btn btn-gold">
           {cta.inquiry}
         </Link>
       </div>

@@ -16,6 +16,7 @@ export type PageKey =
   | "partners"
   | "gallery"
   | "contact"
+  | "enquiry"
   | "privacy";
 
 export const pages: Record<
@@ -95,6 +96,16 @@ export const pages: Record<
     title: "Contact",
     description:
       "Call or WhatsApp Havilah Agro Ghana Limited on 0244 869 488, or send an export inquiry. The postal address is in Tema.",
+    inNav: true,
+    changeFrequency: "yearly",
+    priority: 0.7,
+  },
+  enquiry: {
+    path: "/enquiry",
+    navLabel: "Enquiry",
+    title: "Send us an enquiry",
+    description:
+      "Tell us what you need and we'll get back to you with pricing and availability. Volumes can be approximate.",
     inNav: true,
     changeFrequency: "yearly",
     priority: 0.7,
