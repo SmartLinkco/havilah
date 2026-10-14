@@ -58,8 +58,7 @@ export function ProduceCard({ product }: { product: ProduceItem }) {
             ))}
           </ul>
         ) : null}
-        <p className="mt-4 font-semibold text-green-900">Price on request</p>
-        <div className="mt-4 flex flex-wrap gap-3">
+        <div className="mt-5 flex flex-wrap gap-3">
           <Link href={quoteHref} className="btn btn-primary">
             Request a quote
           </Link>

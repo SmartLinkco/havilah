@@ -55,7 +55,7 @@ export const pages: Record<
     navLabel: "Farm & Produce",
     title: "Farm & Produce",
     description:
-      "Sweet potatoes, watermelon, habanero pepper, mangoes and cassava from the farm in Ghana. Prices are on request.",
+      "Sweet potatoes, watermelon, habanero pepper, mangoes and cassava from the farm in Ghana.",
     inNav: true,
     changeFrequency: "monthly",
     priority: 0.8,
@@ -142,7 +142,7 @@ export const home = {
   intro:
     "Buyers, partners and investors can see how the business is set up: an export aim of 80–90%, a sustainability-led approach, and a mix of organic and inorganic methods. Figures for acreage, volume and season will be added when they are confirmed.",
   produceTitle: "Produce",
-  produceLede: "Sweet potatoes, watermelon, habanero pepper, mangoes and cassava. Prices are on request.",
+  produceLede: "Sweet potatoes, watermelon, habanero pepper, mangoes and cassava.",
   partnersTitle: "Partners",
   partnersLede:
     "A logo strip will sit here after each partner has given written permission. No logos are shown before that.",
