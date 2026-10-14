@@ -5,7 +5,7 @@ import { LogoWall } from "@/components/LogoWall";
 import { PageTransition } from "@/components/PageTransition";
 import { ProduceCard } from "@/components/ProduceCard";
 import { Reveal } from "@/components/Reveal";
-import { SitePhoto } from "@/components/SitePhoto";
+import { HeroVideo } from "@/components/HeroVideo";
 import { SectionHeading } from "@/components/SectionHeading";
 import { StatStrip } from "@/components/StatStrip";
 import { partners } from "@/content/partners";
@@ -24,34 +24,31 @@ export const metadata = pageMetadata({
 export default function HomePage() {
   return (
     <PageTransition>
-      <section className="border-b border-green-100">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:py-20">
-          <div className="hero-enter">
-            <p className="eyebrow">{home.eyebrow}</p>
-            <h1 className="mt-3 font-heading text-4xl font-semibold tracking-tight text-green-900 sm:text-5xl lg:text-6xl">
+      <section className="relative isolate overflow-hidden border-b border-green-100 bg-green-900 lg:bg-transparent">
+        <div className="relative mx-auto grid min-h-[38rem] max-w-6xl items-center gap-10 px-5 py-16 sm:px-8 lg:min-h-0 lg:grid-cols-[1.1fr_0.9fr] lg:py-20">
+          <div className="hero-enter pointer-events-none relative z-20 lg:col-start-1 lg:row-start-1">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-100 lg:text-soil-700">
+              {home.eyebrow}
+            </p>
+            <h1 className="mt-3 font-heading text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl lg:text-green-900">
               {site.tagline}
             </h1>
             <div className="mt-4 h-0.5 w-16 bg-gold-500" />
             {visitorCopy(home.lede) ? (
-              <p className="mt-5 max-w-xl text-lg leading-relaxed">{visitorCopy(home.lede)}</p>
+              <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/90 lg:text-ink">{visitorCopy(home.lede)}</p>
             ) : null}
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="pointer-events-auto mt-8 flex flex-col gap-3 sm:flex-row">
               <Link href={`${pages.contact.path}#inquiry`} className="btn btn-primary">
                 {cta.inquiry}
               </Link>
-              <Link href={pages.farm.path} className="btn btn-secondary">
+              <Link href={pages.farm.path} className="btn btn-hero">
                 {cta.produce}
               </Link>
             </div>
           </div>
-          <SitePhoto
-            src={home.hero.src}
-            alt={home.hero.alt}
-            sizes="(min-width: 1024px) 32rem, 100vw"
-            priority
-            aspectClass="aspect-[4/5] sm:aspect-[5/4]"
-            className="hero-enter-late rounded-2xl"
-          />
+          <div className="absolute inset-0 z-0 hero-enter-late lg:relative lg:inset-auto lg:z-0 lg:col-start-2 lg:row-start-1">
+            <HeroVideo className="h-full min-h-full lg:aspect-[5/4] lg:rounded-2xl" />
+          </div>
         </div>
       </section>
 

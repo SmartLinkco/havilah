@@ -154,9 +154,12 @@ export const home = {
     "Tell us the product, the country and an approximate volume. The inquiry goes to the farm by email, with WhatsApp as the fallback while mail is being set up.",
   hero: {
     src: "/images/home-hero.webp",
+    poster: "/videos/hero-poster.webp",
+    mp4: "/videos/hero.mp4",
+    webm: "/videos/hero.webm",
     alt: "A wide view of lush green farm fields in warm evening light, with tall trees along the horizon.",
-    width: 1280,
-    height: 720,
+    width: 1600,
+    height: 900,
   },
 } as const;
 
