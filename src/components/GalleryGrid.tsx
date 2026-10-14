@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
+import { SitePhoto } from "@/components/SitePhoto";
 import { galleryCategories, galleryItems, type GalleryCategory, type GalleryItem } from "@/content/gallery";
 
 export function GalleryGrid() {
@@ -93,7 +94,15 @@ export function GalleryGrid() {
         {visible.map((item) => (
           <li key={item.id}>
             <button type="button" className="block w-full text-left" onClick={() => open(item)}>
-              <PlaceholderImage title={item.title} caption={item.caption} />
+              {item.image ? (
+                <SitePhoto
+                  src={item.image.src}
+                  alt={item.image.alt}
+                  sizes="(min-width: 1024px) 24rem, (min-width: 640px) 50vw, 100vw"
+                />
+              ) : (
+                <PlaceholderImage title={item.title} caption={item.caption} />
+              )}
               <span className="mt-3 block font-heading text-lg font-semibold text-green-900">{item.title}</span>
               <span className="sr-only">Open larger view</span>
             </button>
@@ -123,7 +132,16 @@ export function GalleryGrid() {
                 Close
               </button>
             </div>
-            <PlaceholderImage title={active.title} caption={active.caption} className="mt-4" aspectClass="aspect-[16/10]" />
+            {active.image ? (
+              <SitePhoto
+                src={active.image.src}
+                alt={active.image.alt}
+                sizes="(min-width: 768px) 48rem, 100vw"
+                aspectClass="mt-4 aspect-[16/10]"
+              />
+            ) : (
+              <PlaceholderImage title={active.title} caption={active.caption} className="mt-4" aspectClass="aspect-[16/10]" />
+            )}
             <p className="mt-4 leading-relaxed">{active.caption}</p>
             <div className="mt-4 flex gap-3">
               <button

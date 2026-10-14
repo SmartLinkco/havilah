@@ -5,7 +5,7 @@ export const site = {
   description:
     "Havilah Agro Ghana Limited is an export-focused Ghanaian farm. The site introduces the business and takes buyer inquiries. There is no online shop.",
   draftNotice:
-    "Draft site. The words, figures and photographs are placeholders until Havilah Agro Ghana Limited confirms them. The leaf-and-globe logo is the official mark.",
+    "Draft site. Much of the wording, and the figures for acreage, volume and seasons, are still to be confirmed. The leaf-and-globe logo is the official mark.",
 } as const;
 
 export type PageKey =
@@ -85,7 +85,7 @@ export const pages: Record<
     navLabel: "Gallery",
     title: "Gallery",
     description:
-      "A filterable gallery for land, crops, team and processing. Photographs are marked Photo coming until the farm supplies them.",
+      "Photographs of the land, crops, team and packing at Havilah Agro Ghana Limited, with filters and a larger view.",
     inNav: true,
     changeFrequency: "monthly",
     priority: 0.6,
@@ -153,6 +153,12 @@ export const home = {
   ctaTitle: "Start an export conversation",
   ctaText:
     "Tell us the product, the country and an approximate volume. The inquiry goes to the farm by email, with WhatsApp as the fallback while mail is being set up.",
+  hero: {
+    src: "/images/home-hero.webp",
+    alt: "A wide view of lush green farm fields in warm evening light, with tall trees along the horizon.",
+    width: 1280,
+    height: 720,
+  },
 } as const;
 
 export const cta = {

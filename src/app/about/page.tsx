@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import { PageHero } from "@/components/PageHero";
-import { PlaceholderImage } from "@/components/PlaceholderImage";
+import { SitePhoto } from "@/components/SitePhoto";
 import { about } from "@/content/about";
 import { pages } from "@/content/site";
 import { pageMetadata } from "@/lib/metadata";
@@ -28,7 +28,12 @@ export default function AboutPage() {
         </div>
         <div className="space-y-6">
           <Logo variant="primary" className="h-auto w-48" />
-          <PlaceholderImage title="Farm story" caption="Photograph for the farm story. Photo coming." />
+          <SitePhoto
+            src={about.storyImage.src}
+            alt={about.storyImage.alt}
+            sizes="(min-width: 1024px) 28rem, 100vw"
+            className="rounded-2xl"
+          />
         </div>
       </section>
       <section className="bg-white">
@@ -49,7 +54,13 @@ export default function AboutPage() {
         <ul className="mt-8 grid gap-5 md:grid-cols-3">
           {about.team.map((person) => (
             <li key={person.id} className="overflow-hidden rounded-2xl border border-green-100 bg-white">
-              <PlaceholderImage title={person.role} caption="Portrait coming." aspectClass="aspect-square" />
+              <SitePhoto
+                src={person.image.src}
+                alt={person.image.alt}
+                sizes="(min-width: 768px) 22rem, 100vw"
+                aspectClass="aspect-square"
+                imageClassName="object-cover object-[center_30%]"
+              />
               <div className="p-5">
                 <h3 className="font-heading text-xl font-semibold text-green-900">{person.role}</h3>
                 <p className="mt-2 text-sm leading-relaxed">{person.text}</p>

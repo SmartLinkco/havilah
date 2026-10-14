@@ -2,8 +2,8 @@ import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
 import { FeatureCard } from "@/components/FeatureCard";
 import { LogoWall } from "@/components/LogoWall";
-import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { ProduceCard } from "@/components/ProduceCard";
+import { SitePhoto } from "@/components/SitePhoto";
 import { SectionHeading } from "@/components/SectionHeading";
 import { StatStrip } from "@/components/StatStrip";
 import { products } from "@/content/produce";
@@ -38,10 +38,13 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <PlaceholderImage
-            title="Farm hero"
-            caption="Hero photograph of the farm. Photo coming."
+          <SitePhoto
+            src={home.hero.src}
+            alt={home.hero.alt}
+            sizes="(min-width: 1024px) 32rem, 100vw"
+            priority
             aspectClass="aspect-[4/5] sm:aspect-[5/4]"
+            className="rounded-2xl"
           />
         </div>
       </section>

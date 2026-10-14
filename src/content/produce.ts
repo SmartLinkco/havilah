@@ -5,6 +5,12 @@ export type ProduceItem = {
   season: string;
   markets: string;
   capacity: string;
+  image?: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+  };
 };
 
 export const produceIntro = {
@@ -22,6 +28,12 @@ export const products: ProduceItem[] = [
     season: "Season to be confirmed",
     markets: "Export markets to be confirmed",
     capacity: "Capacity to be confirmed",
+    image: {
+      src: "/images/produce-cocoa.webp",
+      alt: "Ripe yellow cocoa pods on a trunk, one split open to show the pale beans inside.",
+      width: 1280,
+      height: 720,
+    },
   },
   {
     id: "cashew",
@@ -31,6 +43,12 @@ export const products: ProduceItem[] = [
     season: "Season to be confirmed",
     markets: "Export markets to be confirmed",
     capacity: "Capacity to be confirmed",
+    image: {
+      src: "/images/produce-cashew.webp",
+      alt: "A wooden bowl of curved cashew nuts on a wooden surface, with green leaves beside it.",
+      width: 1280,
+      height: 720,
+    },
   },
   {
     id: "shea",
@@ -40,6 +58,12 @@ export const products: ProduceItem[] = [
     season: "Season to be confirmed",
     markets: "Export markets to be confirmed",
     capacity: "Capacity to be confirmed",
+    image: {
+      src: "/images/produce-shea.webp",
+      alt: "A cluster of green shea fruit hanging among dense leaves.",
+      width: 1280,
+      height: 720,
+    },
   },
   {
     id: "pineapple",
@@ -49,6 +73,12 @@ export const products: ProduceItem[] = [
     season: "Season to be confirmed",
     markets: "Export markets to be confirmed",
     capacity: "Capacity to be confirmed",
+    image: {
+      src: "/images/produce-pineapple.webp",
+      alt: "A ripe pineapple with a spiky crown resting on a wooden surface.",
+      width: 1280,
+      height: 720,
+    },
   },
 ];
 
