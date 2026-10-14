@@ -106,7 +106,7 @@ export const pages: Record<
     title: "Send us an enquiry",
     description:
       "Tell us what you need and we'll get back to you with pricing and availability. Volumes can be approximate.",
-    inNav: true,
+    inNav: false,
     changeFrequency: "yearly",
     priority: 0.7,
   },
