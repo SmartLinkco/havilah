@@ -1,3 +1,5 @@
+import { visitorCopy } from "@/lib/visitor-copy";
+
 export function SectionHeading({
   eyebrow,
   title,
@@ -12,6 +14,7 @@ export function SectionHeading({
   align?: "left" | "center";
 }) {
   const alignment = align === "center" ? "mx-auto text-center" : "";
+  const text = lede ? visitorCopy(lede) : "";
   return (
     <div className={`max-w-3xl ${alignment}`}>
       {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
@@ -19,7 +22,7 @@ export function SectionHeading({
         {title}
       </h2>
       <div className={`mt-4 h-0.5 w-16 bg-gold-500 ${align === "center" ? "mx-auto" : ""}`} />
-      {lede ? <p className="mt-5 text-lg leading-relaxed text-ink">{lede}</p> : null}
+      {text ? <p className="mt-5 text-lg leading-relaxed text-ink">{text}</p> : null}
     </div>
   );
 }

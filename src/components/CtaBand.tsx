@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { cta, home, pages } from "@/content/site";
+import { visitorCopy } from "@/lib/visitor-copy";
 
 export function CtaBand() {
   return (
@@ -9,7 +10,9 @@ export function CtaBand() {
           <h2 id="cta-heading" className="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
             {home.ctaTitle}
           </h2>
-          <p className="mt-4 text-lg leading-relaxed text-green-100">{home.ctaText}</p>
+          {visitorCopy(home.ctaText) ? (
+            <p className="mt-4 text-lg leading-relaxed text-green-100">{visitorCopy(home.ctaText)}</p>
+          ) : null}
         </div>
         <Link href={`${pages.contact.path}#inquiry`} className="btn btn-gold">
           {cta.inquiry}

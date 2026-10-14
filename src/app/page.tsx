@@ -8,8 +8,10 @@ import { Reveal } from "@/components/Reveal";
 import { SitePhoto } from "@/components/SitePhoto";
 import { SectionHeading } from "@/components/SectionHeading";
 import { StatStrip } from "@/components/StatStrip";
+import { partners } from "@/content/partners";
 import { products } from "@/content/produce";
 import { cta, highlights, home, pages, site } from "@/content/site";
+import { visitorCopy } from "@/lib/visitor-copy";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
@@ -30,7 +32,9 @@ export default function HomePage() {
               {site.tagline}
             </h1>
             <div className="mt-4 h-0.5 w-16 bg-gold-500" />
-            <p className="mt-5 max-w-xl text-lg leading-relaxed">{home.lede}</p>
+            {visitorCopy(home.lede) ? (
+              <p className="mt-5 max-w-xl text-lg leading-relaxed">{visitorCopy(home.lede)}</p>
+            ) : null}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link href={`${pages.contact.path}#inquiry`} className="btn btn-primary">
                 {cta.inquiry}
@@ -84,6 +88,7 @@ export default function HomePage() {
 
       <StatStrip />
 
+      {partners.length > 0 ? (
       <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8" aria-labelledby="partners-heading">
         <Reveal>
           <SectionHeading id="partners-heading" eyebrow="Partners" title={home.partnersTitle} lede={home.partnersLede} />
@@ -92,6 +97,7 @@ export default function HomePage() {
           <LogoWall />
         </Reveal>
       </section>
+      ) : null}
 
       <section className="bg-green-100" aria-labelledby="approach-heading">
         <div className="mx-auto grid max-w-6xl gap-8 px-5 py-16 sm:px-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">

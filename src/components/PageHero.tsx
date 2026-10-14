@@ -1,3 +1,5 @@
+import { visitorCopy } from "@/lib/visitor-copy";
+
 export function PageHero({
   eyebrow,
   title,
@@ -7,6 +9,7 @@ export function PageHero({
   title: string;
   lede: string;
 }) {
+  const text = visitorCopy(lede);
   return (
     <section className="border-b border-green-100 bg-green-100">
       <div className="hero-enter mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
@@ -15,7 +18,7 @@ export function PageHero({
           {title}
         </h1>
         <div className="mt-4 h-0.5 w-16 bg-gold-500" />
-        <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink">{lede}</p>
+        {text ? <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink">{text}</p> : null}
       </div>
     </section>
   );
