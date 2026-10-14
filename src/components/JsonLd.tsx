@@ -1,3 +1,4 @@
+import { contact } from "@/content/contact";
 import { site } from "@/content/site";
 import { getSiteUrl } from "@/lib/site-url";
 
@@ -11,10 +12,14 @@ export function JsonLd() {
     description: site.description,
     logo: `${url}/brand/logo-primary.svg`,
     image: `${url}/og-image.png`,
+    telephone: "+233244869488",
     address: {
       "@type": "PostalAddress",
+      postOfficeBoxNumber: "CS 8435",
+      addressLocality: "Tema",
       addressCountry: "GH",
     },
+    hasMap: contact.map.directionsUrl,
     areaServed: "Export markets",
   };
 

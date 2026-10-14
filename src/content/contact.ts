@@ -1,41 +1,41 @@
-const whatsappE164 = "233200000000";
 const whatsappMessage =
   "Hello Havilah Agro Ghana Limited. I would like to enquire about export produce.";
 
 export const contact = {
   eyebrow: "Contact",
   title: "Inquire about export produce",
-  lede: "Send a note to the farm, or use WhatsApp. Phone, email, the map and social profiles below are placeholders until Havilah Agro confirms them. There is no online shop.",
+  lede: "Send a note to the farm, or call and message on WhatsApp. There is no online shop.",
   whatsapp: {
-    e164: whatsappE164,
-    display: "+233 20 000 0000",
-    confirmed: false,
-    note: "Placeholder number. Replace it in src/content/contact.ts when the farm confirms the real WhatsApp line.",
+    e164: "233244869488",
+    display: "0244 869 488",
+    confirmed: true,
+    note: "",
     prefilledMessage: whatsappMessage,
-    href: `https://wa.me/${whatsappE164}?text=${encodeURIComponent(whatsappMessage)}`,
+    href: "https://wa.me/233244869488",
   },
   phone: {
-    display: "+233 20 000 0000",
-    href: "tel:+233200000000",
-    confirmed: false,
-    note: "Placeholder number, same stand-in as WhatsApp until the farm confirms a telephone line.",
+    display: "0244 869 488",
+    href: "tel:+233244869488",
+    confirmed: true,
+    note: "",
   },
   email: {
-    display: "hello@havilahagro.example",
-    href: "mailto:hello@havilahagro.example",
+    published: false,
+    display: "",
+    href: "",
     confirmed: false,
-    note: "Placeholder address on the reserved .example domain. It is not a working farm inbox.",
+    note: "",
   },
   address: {
-    lines: ["Farm location to be confirmed", "Ghana"],
-    confirmed: false,
+    lines: ["P.O. Box CS 8435", "Tema, Ghana"],
+    confirmed: true,
   },
   map: {
-    embedUrl: null as string | null,
+    embedUrl: "https://maps.google.com/maps?q=6.270051,0.843154&z=15&output=embed",
+    directionsUrl: "https://maps.google.com/?q=6.270051,0.843154",
     title: "Map of the farm",
-    emptyTitle: "Farm map coming",
-    emptyText:
-      "The map pin will be embedded when Havilah Agro confirms the farm location. No approximate pin is shown in its place.",
+    emptyTitle: "",
+    emptyText: "",
   },
   socials: [
     { id: "linkedin", label: "LinkedIn", href: null },

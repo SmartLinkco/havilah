@@ -1,7 +1,7 @@
 "use client";
 
 import Script from "next/script";
-import { useId, useState, type FormEvent } from "react";
+import { useId, useState, useSyncExternalStore, type FormEvent } from "react";
 import { forms, contact } from "@/content/contact";
 import { interestOptions } from "@/content/produce";
 import { visitorName } from "@/lib/visitor-copy";
@@ -13,6 +13,19 @@ type FormCopy = (typeof forms)["inquiry"] | (typeof forms)["quote"];
 type FieldErrors = Record<string, string>;
 
 const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY?.trim() ?? "";
+
+function productFromLocation() {
+  return new URLSearchParams(window.location.search).get("product") ?? "";
+}
+
+function subscribeToProductQuery(onStoreChange: () => void) {
+  window.addEventListener("popstate", onStoreChange);
+  return () => window.removeEventListener("popstate", onStoreChange);
+}
+
+function emptyProductQuery() {
+  return "";
+}
 
 function trackInquiry(intent: InquiryIntent) {
   if (typeof window.gtag === "function") {
@@ -26,6 +39,20 @@ export function InquiryForm({ copy }: { copy: FormCopy }) {
   const [message, setMessage] = useState("");
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
   const [whatsappUrl, setWhatsappUrl] = useState<string>(contact.whatsapp.href);
+  const requestedProduct = useSyncExternalStore(
+    subscribeToProductQuery,
+    productFromLocation,
+    emptyProductQuery,
+  );
+  const [interest, setInterest] = useState("general");
+  const [appliedProduct, setAppliedProduct] = useState("");
+
+  if (requestedProduct !== appliedProduct) {
+    setAppliedProduct(requestedProduct);
+    if (interestOptions.some((option) => option.value === requestedProduct)) {
+      setInterest(requestedProduct);
+    }
+  }
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -174,7 +201,8 @@ export function InquiryForm({ copy }: { copy: FormCopy }) {
             className="field mt-1"
             aria-invalid={fieldErrors.interest ? true : undefined}
             aria-describedby={fieldErrors.interest ? `${baseId}-interest-error` : undefined}
-            defaultValue="general"
+            value={interest}
+            onChange={(event) => setInterest(event.target.value)}
           >
             {interestOptions.map((option) => (
               <option key={option.value} value={option.value}>

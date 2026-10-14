@@ -59,9 +59,9 @@ Home, About, Farm & Produce, Sustainability, Partners & Certifications, Gallery,
 - The working tagline “Grown in Ghana. Trusted worldwide.”, which is the line on the social image and can still be revised
 - Partner logos, certificates, and any sustainability photographs (the home, about, produce and gallery photographs are in place)
 - Acreage, export volume and seasons
-- Example produce cards (cocoa, cashew, shea, pineapple), which are layout samples, not a confirmed product list
 - Partner logos (none, until written permission) and certifications (none, until a certificate is confirmed)
-- WhatsApp and phone (`+233 20 000 0000`), email (`hello@havilahagro.example`), street address, map pin and social links
+- A public email address (the phone, WhatsApp, postal address and farm map are published; the email line is hidden)
+- Social profile links
 - The Resend inbox, Turnstile keys, Analytics ID and the public site URL, until they are set in the environment
 
 The leaf-and-globe logo is the official mark, not a placeholder.

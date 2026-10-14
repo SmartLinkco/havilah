@@ -55,7 +55,7 @@ export const pages: Record<
     navLabel: "Farm & Produce",
     title: "Farm & Produce",
     description:
-      "Example produce cards, the export path from farm to shipment, and a quote request. Seasons and volumes are not yet confirmed.",
+      "Sweet potatoes, watermelon, habanero pepper, mangoes and cassava from the farm in Ghana. Prices are on request.",
     inNav: true,
     changeFrequency: "monthly",
     priority: 0.8,
@@ -95,7 +95,7 @@ export const pages: Record<
     navLabel: "Contact",
     title: "Contact",
     description:
-      "Send an export inquiry to Havilah Agro Ghana Limited, or use WhatsApp, phone and email once the farm confirms those details.",
+      "Call or WhatsApp Havilah Agro Ghana Limited on 0244 869 488, or send an export inquiry. The postal address is in Tema.",
     inNav: true,
     changeFrequency: "yearly",
     priority: 0.7,
@@ -137,13 +137,12 @@ export const highlights = [
 
 export const home = {
   eyebrow: "Export farming · Ghana",
-  lede: "Havilah Agro Ghana Limited grows for buyers who need a clear Ghanaian origin. This introduction is draft copy. The farm’s own wording will replace it.",
+  lede: "Havilah Agro Ghana Limited grows sweet potatoes, watermelon, habanero pepper, mangoes and cassava for buyers who need a clear Ghanaian origin.",
   introTitle: "A farm prepared for export conversations",
   intro:
     "Buyers, partners and investors can see how the business is set up: an export aim of 80–90%, a sustainability-led approach, and a mix of organic and inorganic methods. Figures for acreage, volume and season will be added when they are confirmed.",
   produceTitle: "Produce",
-  produceLede:
-    "These cards show the layout only. Each crop is an example until Havilah Agro confirms the real product list, seasons and markets.",
+  produceLede: "Sweet potatoes, watermelon, habanero pepper, mangoes and cassava. Prices are on request.",
   partnersTitle: "Partners",
   partnersLede:
     "A logo strip will sit here after each partner has given written permission. No logos are shown before that.",
