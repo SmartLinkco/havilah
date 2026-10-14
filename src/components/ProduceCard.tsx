@@ -1,6 +1,8 @@
+import Link from "next/link";
 import type { ProduceItem } from "@/content/produce";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { SitePhoto } from "@/components/SitePhoto";
+import { pages } from "@/content/site";
 import { visitorCopy, visitorName } from "@/lib/visitor-copy";
 
 export function ProduceCard({ product }: { product: ProduceItem }) {
@@ -31,6 +33,10 @@ export function ProduceCard({ product }: { product: ProduceItem }) {
       <div className="flex flex-1 flex-col p-6">
         <h3 className="font-heading text-2xl font-semibold text-green-900">{visitorName(product.name)}</h3>
         {summary ? <p className="mt-3 flex-1 leading-relaxed text-ink">{summary}</p> : null}
+        <p className="mt-4 font-semibold text-green-900">Price on request</p>
+        <Link href={`${pages.contact.path}#inquiry`} className="btn btn-primary mt-4 self-start">
+          Make an inquiry
+        </Link>
         {facts.length > 0 ? (
           <dl className="mt-5 space-y-2 text-sm">
             {facts.map((fact) => (

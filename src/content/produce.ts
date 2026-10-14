@@ -15,70 +15,50 @@ export type ProduceItem = {
 
 export const produceIntro = {
   eyebrow: "Farm & produce",
-  title: "What the farm will offer buyers",
-  lede: "The cards below are example slots. Names, seasons, markets and capacity stay unmarked as confirmed facts until Havilah Agro sends the product list. Nothing on this page is an offer to sell online.",
+  title: "Produce from the farm",
+  lede: "Sweet potatoes, watermelon, habanero pepper, mangoes and cassava, grown in Ghana for export buyers. Prices are on request. Nothing on this page is an offer to sell online.",
 } as const;
 
 export const products: ProduceItem[] = [
   {
-    id: "cocoa",
-    name: "Example: cocoa",
-    summary:
-      "A sample card for a cocoa line. Description, grade and availability will be replaced when the farm confirms this crop, or removed if it is not grown.",
-    season: "Season to be confirmed",
-    markets: "Export markets to be confirmed",
-    capacity: "Capacity to be confirmed",
-    image: {
-      src: "/images/produce-cocoa.webp",
-      alt: "Ripe yellow cocoa pods on a trunk, one split open to show the pale beans inside.",
-      width: 1280,
-      height: 720,
-    },
+    id: "sweet-potatoes",
+    name: "Sweet potatoes",
+    summary: "Sweet potatoes grown in Ghana for export buyers.",
+    season: "",
+    markets: "",
+    capacity: "",
   },
   {
-    id: "cashew",
-    name: "Example: cashew",
-    summary:
-      "A sample card for a cashew line. Use it to review the layout. It is not a statement that the farm currently exports cashew.",
-    season: "Season to be confirmed",
-    markets: "Export markets to be confirmed",
-    capacity: "Capacity to be confirmed",
-    image: {
-      src: "/images/produce-cashew.webp",
-      alt: "A wooden bowl of curved cashew nuts on a wooden surface, with green leaves beside it.",
-      width: 1280,
-      height: 720,
-    },
+    id: "watermelon",
+    name: "Watermelon",
+    summary: "Watermelon grown in Ghana for export buyers.",
+    season: "",
+    markets: "",
+    capacity: "",
   },
   {
-    id: "shea",
-    name: "Example: shea",
-    summary:
-      "A sample card for a shea line. Processing notes and buyer specifications will be added only if this product is confirmed.",
-    season: "Season to be confirmed",
-    markets: "Export markets to be confirmed",
-    capacity: "Capacity to be confirmed",
-    image: {
-      src: "/images/produce-shea.webp",
-      alt: "A cluster of green shea fruit hanging among dense leaves.",
-      width: 1280,
-      height: 720,
-    },
+    id: "pepper",
+    name: "Pepper (Habanero)",
+    summary: "Habanero pepper grown in Ghana for export buyers.",
+    season: "",
+    markets: "",
+    capacity: "",
   },
   {
-    id: "pineapple",
-    name: "Example: pineapple",
-    summary:
-      "A sample card for a fresh-produce line. Pack format, season and cold-chain notes are waiting on the farm.",
-    season: "Season to be confirmed",
-    markets: "Export markets to be confirmed",
-    capacity: "Capacity to be confirmed",
-    image: {
-      src: "/images/produce-pineapple.webp",
-      alt: "A ripe pineapple with a spiky crown resting on a wooden surface.",
-      width: 1280,
-      height: 720,
-    },
+    id: "mangoes",
+    name: "Mangoes",
+    summary: "Mangoes grown in Ghana for export buyers.",
+    season: "",
+    markets: "",
+    capacity: "",
+  },
+  {
+    id: "cassava",
+    name: "Cassava",
+    summary: "Cassava grown in Ghana for export buyers.",
+    season: "",
+    markets: "",
+    capacity: "",
   },
 ];
 

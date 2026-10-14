@@ -39,6 +39,7 @@ export default function ContactPage() {
                   <p className="mt-1 text-sm text-soil-700">{visitorCopy(contact.phone.note)}</p>
                 ) : null}
               </li>
+              {contact.email.published ? (
               <li>
                 <a href={contact.email.href} className="font-semibold text-green-700 underline">
                   {contact.email.display}
@@ -47,6 +48,7 @@ export default function ContactPage() {
                   <p className="mt-1 text-sm text-soil-700">{visitorCopy(contact.email.note)}</p>
                 ) : null}
               </li>
+              ) : null}
               <li>
                 <p className="font-semibold text-green-900">
                   {contact.address.lines.filter((line) => visitorCopy(line)).join(", ")}

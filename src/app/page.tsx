@@ -74,7 +74,7 @@ export default function HomePage() {
             <SectionHeading id="produce-heading" eyebrow="Produce" title={home.produceTitle} lede={home.produceLede} />
           </Reveal>
           <div className="mt-10 grid gap-5 md:grid-cols-2">
-            {products.slice(0, 4).map((product, index) => (
+            {products.map((product, index) => (
               <Reveal key={product.id} delay={index * 70}>
                 <ProduceCard product={product} />
               </Reveal>
