@@ -8,7 +8,7 @@ export function StatStrip() {
           Headline figures
         </h2>
         <p className="mt-3 max-w-2xl text-green-100">
-          Only the export aim is taken from the project brief. The other figures stay blank until the farm confirms them.
+          The export aim is 80–90%. The other figures stay blank until they are confirmed.
         </p>
         <dl className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat) => (

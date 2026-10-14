@@ -1,7 +1,7 @@
 export const about = {
   eyebrow: "About the farm",
   title: "A Ghanaian farm, introduced with care",
-  lede: "This page is draft copy for Mr. Kwame Ofori-Atta to replace. It states only what the project brief already established.",
+  lede: "This page is draft copy. It states only what is already known about the business, and the farm’s own wording will replace it.",
   storyTitle: "Story",
   story: [
     "Havilah Agro Ghana Limited is a farm business in Ghana with an export aim of about 80–90% of production. The website exists to build trust and to receive inquiries. It does not take orders or payments.",

@@ -11,7 +11,7 @@ export const stats: Stat[] = [
     id: "export-aim",
     label: "Export aim",
     value: "80–90%",
-    note: "Share of production intended for export, from the project brief. Measured volumes are still to be confirmed.",
+    note: "Share of production intended for export. Measured volumes are still to be confirmed.",
     pending: false,
   },
   {

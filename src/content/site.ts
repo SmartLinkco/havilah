@@ -6,7 +6,6 @@ export const site = {
     "Havilah Agro Ghana Limited is an export-focused Ghanaian farm. The site introduces the business and takes buyer inquiries. There is no online shop.",
   draftNotice:
     "Draft site. The words, figures and photographs are placeholders until Havilah Agro Ghana Limited confirms them. The leaf-and-globe logo is the official mark.",
-  client: "Mr. Kwame Ofori-Atta",
 } as const;
 
 export type PageKey =
