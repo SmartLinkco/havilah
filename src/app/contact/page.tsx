@@ -1,6 +1,8 @@
 import { InquiryForm } from "@/components/InquiryForm";
 import { MapEmbed } from "@/components/MapEmbed";
 import { PageHero } from "@/components/PageHero";
+import { PageTransition } from "@/components/PageTransition";
+import { Reveal } from "@/components/Reveal";
 import { contact, forms } from "@/content/contact";
 import { pages } from "@/content/site";
 import { pageMetadata } from "@/lib/metadata";
@@ -13,10 +15,10 @@ export const metadata = pageMetadata({
 
 export default function ContactPage() {
   return (
-    <>
+    <PageTransition>
       <PageHero eyebrow={contact.eyebrow} title={contact.title} lede={contact.lede} />
       <section className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[0.85fr_1.15fr]">
-        <div className="space-y-8">
+        <Reveal className="space-y-8">
           <div>
             <h2 className="font-heading text-2xl font-semibold text-green-900">Talk to the farm</h2>
             <ul className="mt-4 space-y-4 text-base">
@@ -63,9 +65,11 @@ export default function ContactPage() {
               ))}
             </ul>
           </div>
-        </div>
-        <InquiryForm copy={forms.inquiry} />
+        </Reveal>
+        <Reveal delay={80}>
+          <InquiryForm copy={forms.inquiry} />
+        </Reveal>
       </section>
-    </>
+    </PageTransition>
   );
 }

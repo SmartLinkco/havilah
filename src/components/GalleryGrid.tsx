@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
+import { Reveal } from "@/components/Reveal";
 import { SitePhoto } from "@/components/SitePhoto";
 import { galleryCategories, galleryItems, type GalleryCategory, type GalleryItem } from "@/content/gallery";
 
@@ -90,10 +91,11 @@ export function GalleryGrid() {
           );
         })}
       </div>
-      <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {visible.map((item) => (
+      <ul key={category} className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {visible.map((item, index) => (
           <li key={item.id}>
-            <button type="button" className="block w-full text-left" onClick={() => open(item)}>
+            <Reveal delay={index * 60}>
+            <button type="button" className="lift-card block w-full text-left" onClick={() => open(item)}>
               {item.image ? (
                 <SitePhoto
                   src={item.image.src}
@@ -106,6 +108,7 @@ export function GalleryGrid() {
               <span className="mt-3 block font-heading text-lg font-semibold text-green-900">{item.title}</span>
               <span className="sr-only">Open larger view</span>
             </button>
+            </Reveal>
           </li>
         ))}
       </ul>
@@ -118,7 +121,7 @@ export function GalleryGrid() {
             aria-modal="true"
             aria-labelledby={titleId}
             tabIndex={-1}
-            className="max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl bg-cream p-4 shadow-xl outline-none sm:p-6"
+            className="dialog-in max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl bg-cream p-4 shadow-xl outline-none sm:p-6"
             onClick={(event) => event.stopPropagation()}
           >
             <div className="flex items-start justify-between gap-4">

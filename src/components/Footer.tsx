@@ -5,7 +5,7 @@ import { navItems, pages, site } from "@/content/site";
 
 export function Footer() {
   return (
-    <footer className="bg-green-900 text-white">
+    <footer className="bg-green-900 text-white" style={{ viewTransitionName: "site-footer" }}>
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-3">
         <div>
           <Logo variant="horizontal-reversed" className="h-14 w-auto rounded-md" />

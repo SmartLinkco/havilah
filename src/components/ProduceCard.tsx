@@ -4,7 +4,7 @@ import { SitePhoto } from "@/components/SitePhoto";
 
 export function ProduceCard({ product }: { product: ProduceItem }) {
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-green-100 bg-white shadow-sm">
+    <article className="lift-card flex h-full flex-col overflow-hidden rounded-2xl border border-green-100 bg-white shadow-sm">
       {product.image ? (
         <SitePhoto
           src={product.image.src}

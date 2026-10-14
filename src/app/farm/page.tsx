@@ -1,6 +1,8 @@
 import { InquiryForm } from "@/components/InquiryForm";
 import { PageHero } from "@/components/PageHero";
+import { PageTransition } from "@/components/PageTransition";
 import { ProduceCard } from "@/components/ProduceCard";
+import { Reveal } from "@/components/Reveal";
 import { exportSteps, produceIntro, products } from "@/content/produce";
 import { forms } from "@/content/contact";
 import { pages } from "@/content/site";
@@ -14,13 +16,15 @@ export const metadata = pageMetadata({
 
 export default function FarmPage() {
   return (
-    <>
+    <PageTransition>
       <PageHero eyebrow={produceIntro.eyebrow} title={produceIntro.title} lede={produceIntro.lede} />
       <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
         <ul className="grid gap-5 md:grid-cols-2">
-          {products.map((product) => (
+          {products.map((product, index) => (
             <li key={product.id}>
-              <ProduceCard product={product} />
+              <Reveal delay={index * 70} className="h-full">
+                <ProduceCard product={product} />
+              </Reveal>
             </li>
           ))}
         </ul>
@@ -32,20 +36,26 @@ export default function FarmPage() {
           </h2>
           <ol className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {exportSteps.map((step, index) => (
-              <li key={step.title} className="rounded-2xl bg-white/5 p-5">
+              <li key={step.title}>
+                <Reveal delay={index * 70} className="h-full">
+              <div className="lift-card h-full rounded-2xl bg-white/5 p-5">
                 <p className="font-heading text-sm font-semibold tracking-[0.16em] text-gold-100">
                   0{index + 1}
                 </p>
                 <h3 className="mt-3 font-heading text-xl font-semibold">{step.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-green-100">{step.text}</p>
+              </div>
+                </Reveal>
               </li>
             ))}
           </ol>
         </div>
       </section>
       <section className="mx-auto max-w-3xl px-5 py-16 sm:px-8">
-        <InquiryForm copy={forms.quote} />
+        <Reveal>
+          <InquiryForm copy={forms.quote} />
+        </Reveal>
       </section>
-    </>
+    </PageTransition>
   );
 }

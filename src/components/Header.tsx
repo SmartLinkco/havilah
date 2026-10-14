@@ -32,8 +32,10 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-green-100 bg-cream">
-      <div className="h-1 bg-green-700" />
+    <header
+      className="sticky top-0 z-40 border-b border-green-100 bg-cream"
+      style={{ viewTransitionName: "site-header" }}
+    >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
         <Link href="/" className="shrink-0 rounded-sm">
           <Logo variant="horizontal" className="h-11 w-auto sm:h-12" />
@@ -46,7 +48,7 @@ export function Header() {
                 key={item.path}
                 href={item.path}
                 aria-current={current ? "page" : undefined}
-                className={`text-sm font-semibold ${current ? "text-green-700" : "text-ink hover:text-green-700"}`}
+                className={`text-sm font-semibold transition-colors ${current ? "text-green-700" : "text-ink hover:text-green-700"}`}
               >
                 {item.navLabel}
               </Link>
@@ -69,7 +71,7 @@ export function Header() {
       {open ? (
         <nav
           id={panelId}
-          className="fixed inset-x-0 top-[4.75rem] bottom-0 z-30 overflow-y-auto bg-cream px-5 py-6 lg:hidden"
+          className="menu-panel absolute inset-x-0 top-full z-30 h-[calc(100dvh-100%)] overflow-y-auto bg-cream px-5 py-6 lg:hidden"
           aria-label="Mobile"
         >
           <ul className="space-y-2">
