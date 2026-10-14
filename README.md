@@ -1,6 +1,6 @@
 # Havilah Agro Ghana Limited
 
-Export-focused, sustainable farm website for Mr. Kwame Ofori-Atta. The site builds trust with buyers, partners and investors, and takes inquiries. There is no online shop.
+Website for Havilah Agro Ghana Limited, an export-focused, sustainable farm. The site builds trust with buyers, partners and investors, and takes inquiries. There is no online shop.
 
 ## Brand
 
