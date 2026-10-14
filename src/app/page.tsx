@@ -1,16 +1,14 @@
 import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
-import { FeatureCard } from "@/components/FeatureCard";
+import { CompanyProfile } from "@/components/CompanyProfile";
 import { LogoWall } from "@/components/LogoWall";
 import { PageTransition } from "@/components/PageTransition";
-import { ProduceCard } from "@/components/ProduceCard";
+import { ProductGroups } from "@/components/ProductGroups";
 import { Reveal } from "@/components/Reveal";
 import { HeroVideo } from "@/components/HeroVideo";
 import { SectionHeading } from "@/components/SectionHeading";
-import { StatStrip } from "@/components/StatStrip";
 import { partners } from "@/content/partners";
-import { products } from "@/content/produce";
-import { cta, highlights, home, pages, site } from "@/content/site";
+import { cta, home, pages, site } from "@/content/site";
 import { visitorCopy } from "@/lib/visitor-copy";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -27,9 +25,11 @@ export default function HomePage() {
       <section className="relative isolate overflow-hidden border-b border-green-100 bg-green-900 lg:bg-transparent">
         <div className="relative mx-auto grid min-h-[38rem] max-w-6xl items-center gap-10 px-5 py-16 sm:px-8 lg:min-h-0 lg:grid-cols-[1.1fr_0.9fr] lg:py-20">
           <div className="hero-enter pointer-events-none relative z-20 lg:col-start-1 lg:row-start-1">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-100 lg:text-soil-700">
-              {home.eyebrow}
-            </p>
+            {home.eyebrow ? (
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-100 lg:text-soil-700">
+                {home.eyebrow}
+              </p>
+            ) : null}
             <h1 className="mt-3 font-heading text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl lg:text-green-900">
               {site.tagline}
             </h1>
@@ -52,38 +52,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8" aria-labelledby="intro-heading">
-        <Reveal>
-          <SectionHeading id="intro-heading" title={home.introTitle} lede={home.intro} />
-        </Reveal>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2">
-          {highlights.map((item, index) => (
-            <Reveal key={item.title} delay={index * 80}>
-              <FeatureCard title={item.title} text={item.text} />
-            </Reveal>
-          ))}
-        </div>
-      </section>
+      <CompanyProfile />
 
       <section className="bg-white" aria-labelledby="produce-heading">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
           <Reveal>
             <SectionHeading id="produce-heading" eyebrow="Produce" title={home.produceTitle} lede={home.produceLede} />
           </Reveal>
-          <div className="mt-10 grid gap-5 md:grid-cols-2">
-            {products.map((product, index) => (
-              <Reveal key={product.id} delay={index * 70}>
-                <ProduceCard product={product} />
-              </Reveal>
-            ))}
+          <div className="mt-10">
+            <ProductGroups heading="h3" />
           </div>
-          <Link href={`${pages.farm.path}#quote`} className="btn btn-primary mt-8">
-            {cta.quote}
-          </Link>
         </div>
       </section>
-
-      <StatStrip />
 
       {partners.length > 0 ? (
       <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8" aria-labelledby="partners-heading">

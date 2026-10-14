@@ -11,20 +11,7 @@ function whatsappOrderHref(productName: string) {
 }
 
 export function ProduceCard({ product }: { product: ProduceItem }) {
-  const paragraphs = product.paragraphs.flatMap((paragraph) => {
-    const text = visitorCopy(paragraph);
-    return text ? [text] : [];
-  });
-  const facts = (
-    [
-      ["Season", product.season],
-      ["Export markets", product.markets],
-      ["Capacity", product.capacity],
-    ] as const
-  ).flatMap(([label, value]) => {
-    const text = visitorCopy(value);
-    return text ? [{ label, text }] : [];
-  });
+  const description = visitorCopy(product.description);
   const quoteHref = `${pages.contact.path}?product=${product.id}#inquiry`;
 
   return (
@@ -37,15 +24,8 @@ export function ProduceCard({ product }: { product: ProduceItem }) {
         className="rounded-none"
       />
       <div className="flex flex-1 flex-col p-6">
-        <p className="eyebrow">{visitorName(product.name)}</p>
-        <h3 className="mt-2 font-heading text-2xl font-semibold text-green-900">{product.headline}</h3>
-        {paragraphs.length > 0 ? (
-          <div className="mt-3 flex-1 space-y-3 leading-relaxed text-ink">
-            {paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-        ) : null}
+        <h3 className="font-heading text-2xl font-semibold text-green-900">{visitorName(product.name)}</h3>
+        {description ? <p className="mt-3 flex-1 leading-relaxed text-ink">{description}</p> : null}
         {product.benefits.length > 0 ? (
           <ul className="mt-4 flex flex-wrap gap-2">
             {product.benefits.map((benefit) => (
@@ -71,16 +51,6 @@ export function ProduceCard({ product }: { product: ProduceItem }) {
             Order on WhatsApp
           </a>
         </div>
-        {facts.length > 0 ? (
-          <dl className="mt-5 space-y-2 text-sm">
-            {facts.map((fact) => (
-              <div key={fact.label}>
-                <dt className="font-semibold text-soil-700">{fact.label}</dt>
-                <dd>{fact.text}</dd>
-              </div>
-            ))}
-          </dl>
-        ) : null}
       </div>
     </article>
   );

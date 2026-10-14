@@ -10,7 +10,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-3">
         <div>
           <Logo variant="horizontal-reversed" className="h-14 w-auto rounded-md" />
-          <p className="mt-4 max-w-xs text-sm leading-relaxed text-green-100">{site.description}</p>
+          <p className="mt-4 max-w-xs font-heading text-lg font-semibold leading-snug text-white">{site.tagline}</p>
         </div>
         <div>
           <h2 className="font-heading text-lg font-semibold">Visit</h2>
