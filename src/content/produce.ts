@@ -1,11 +1,13 @@
 export type ProduceItem = {
   id: string;
   name: string;
-  summary: string;
+  headline: string;
+  paragraphs: readonly string[];
+  benefits: readonly string[];
   season: string;
   markets: string;
   capacity: string;
-  image?: {
+  image: {
     src: string;
     alt: string;
     width: number;
@@ -16,49 +18,109 @@ export type ProduceItem = {
 export const produceIntro = {
   eyebrow: "Farm & produce",
   title: "Produce from the farm",
-  lede: "Sweet potatoes, watermelon, habanero pepper, mangoes and cassava, grown in Ghana for export buyers. Prices are on request. Nothing on this page is an offer to sell online.",
+  lede: "Sweet potatoes, watermelon, habanero pepper, mangoes and cassava, grown in Ghana for buyers at home and abroad. Prices are on request. Nothing on this page is an offer to sell online.",
 } as const;
 
 export const products: ProduceItem[] = [
   {
     id: "sweet-potatoes",
     name: "Sweet potatoes",
-    summary: "Sweet potatoes grown in Ghana for export buyers.",
+    headline: "Sweet potatoes for trade and the table",
+    paragraphs: [
+      "Firm roots leave the field and reach you while they are still fresh, on a short path from harvest to delivery.",
+      "Lots are sorted for size and condition, so wholesalers and kitchens receive a consistent grade.",
+      "Households, hotels, restaurants and traders can take regular supply. Bulk and contract orders are welcome.",
+    ],
+    benefits: ["Farm-fresh", "Graded lots", "Bulk orders", "Reliable supply"],
     season: "",
     markets: "",
     capacity: "",
+    image: {
+      src: "/images/products/sweet-potatoes.webp",
+      alt: "A woven basket of reddish-brown sweet potatoes with soil on the skins, sitting on red earth in a green field.",
+      width: 1280,
+      height: 720,
+    },
   },
   {
     id: "watermelon",
     name: "Watermelon",
-    summary: "Watermelon grown in Ghana for export buyers.",
+    headline: "Watermelon for markets, hotels and traders",
+    paragraphs: [
+      "Fruit is harvested and sent while it is fresh, so it arrives ready for the stall, the kitchen or the table.",
+      "Each lot is checked for ripeness and condition before it leaves the farm.",
+      "Market traders, hotels, restaurants and households can order in bulk or arrange a standing supply.",
+    ],
+    benefits: ["Farm-fresh", "Consistent lots", "Bulk orders"],
     season: "",
     markets: "",
     capacity: "",
+    image: {
+      src: "/images/products/watermelon.webp",
+      alt: "Whole striped watermelons and one cut fruit with red flesh in a wooden crate on a farm field.",
+      width: 1280,
+      height: 720,
+    },
   },
   {
     id: "pepper",
     name: "Pepper (Habanero)",
-    summary: "Habanero pepper grown in Ghana for export buyers.",
+    headline: "Habanero pepper for sauces and the fresh trade",
+    paragraphs: [
+      "Pods are picked and moved quickly, so colour and heat stay close to the field.",
+      "They are sorted by colour and condition for a more even lot.",
+      "Buy them fresh, for hot sauces, or for further processing. Bulk and contract supply are available on request.",
+    ],
+    benefits: ["Farm-fresh", "Graded pods", "Bulk orders", "For processing"],
     season: "",
     markets: "",
     capacity: "",
+    image: {
+      src: "/images/products/habanero-pepper.webp",
+      alt: "A basket of glossy orange and red habanero peppers in front of pepper plants.",
+      width: 1280,
+      height: 720,
+    },
   },
   {
     id: "mangoes",
     name: "Mangoes",
-    summary: "Mangoes grown in Ghana for export buyers.",
+    headline: "Mangoes for the fresh market and the kitchen",
+    paragraphs: [
+      "Fruit is harvested and forwarded while it is still fresh.",
+      "Lots are graded for size and appearance, so kitchens and traders know what they are receiving.",
+      "Households, hotels, restaurants and market traders can take bulk or contract supply.",
+    ],
+    benefits: ["Farm-fresh", "Graded fruit", "Bulk orders", "Reliable supply"],
     season: "",
     markets: "",
     capacity: "",
+    image: {
+      src: "/images/products/mangoes.webp",
+      alt: "Ripe mangoes with red and yellow skin packed in a wooden crate under a mango tree.",
+      width: 1280,
+      height: 720,
+    },
   },
   {
     id: "cassava",
     name: "Cassava",
-    summary: "Cassava grown in Ghana for export buyers.",
+    headline: "Cassava for gari, fufu and starch",
+    paragraphs: [
+      "Roots are lifted and moved promptly so they stay sound for cooking and processing.",
+      "Lots are sorted for size and soundness before they leave the farm.",
+      "Use them for household cooking, for gari and fufu, or for processing into starch. Bulk and contract supply are available on request.",
+    ],
+    benefits: ["Farm-fresh", "Bulk orders", "For processing", "Reliable supply"],
     season: "",
     markets: "",
     capacity: "",
+    image: {
+      src: "/images/products/cassava.webp",
+      alt: "Pale cassava roots with rough brown skin stacked in a wooden crate on red soil, with leafy cassava plants behind.",
+      width: 1280,
+      height: 720,
+    },
   },
 ];
 
