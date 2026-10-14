@@ -115,18 +115,6 @@ h4,
   background: rgb(255 255 255 / 0.2);
 }
 
-@media (min-width: 1024px) {
-  .btn-hero {
-    border-color: #1e5631;
-    color: #1e5631;
-    background: transparent;
-  }
-
-  .btn-hero:hover {
-    background: #e3eee6;
-  }
-}
-
 .btn-gold {
   background: #c9a13b;
   color: #1b1f1a;

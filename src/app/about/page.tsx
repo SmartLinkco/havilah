@@ -1,4 +1,5 @@
 import { CompanyProfile } from "@/components/CompanyProfile";
+import { FounderSection } from "@/components/Founder";
 import { PageTransition } from "@/components/PageTransition";
 import { Reveal } from "@/components/Reveal";
 import { SitePhoto } from "@/components/SitePhoto";
@@ -35,6 +36,7 @@ export default function AboutPage() {
           </Reveal>
         </div>
       </section>
+      <FounderSection />
       <CompanyProfile showAbout={false} />
     </PageTransition>
   );

@@ -49,6 +49,19 @@ export const about = {
       text: "We work with local farmers, supplying inputs and guidance so they can meet international standards and share export earnings.",
     },
   ],
+  founder: {
+    id: "founder",
+    title: "Meet Our Founder",
+    name: "Harry Boakye Ofori-Attah Esq.",
+    role: "Founder & Managing Director, Havilah Agro",
+    initials: "HO",
+    teaser:
+      "Harry Boakye Ofori-Attah Esq. is a business leader, entrepreneur, and chartered professional whose passion for agriculture gave birth to Havilah Agro.",
+    paragraphs: [
+      "Harry Boakye Ofori-Attah Esq. is a business leader, entrepreneur, and chartered professional whose passion for agriculture gave birth to Havilah Agro. With over a decade of experience in business management and enterprise growth, he brings corporate discipline, integrity, and vision to modern farming.",
+      "He is driven by a simple purpose: to build a sustainable, thriving agribusiness that promotes food security, creates lasting value from Ghana's rich land, and carries Ghanaian produce to the world.",
+    ],
+  },
   storyImage: {
     src: "/images/about-story.webp",
     alt: "Two people walk away along a dirt path between green fields, toward a line of tall trees.",
