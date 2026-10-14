@@ -37,7 +37,7 @@ npm run dev
 | --- | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | No | Canonical origin for metadata, the sitemap and Open Graph. Falls back to `https://$VERCEL_URL`, then `http://localhost:3000`. |
 | `RESEND_API_KEY` | Yes, to send mail | Resend API key. |
-| `INQUIRY_TO_EMAIL` | Yes, to send mail | Inbox that receives inquiries and quote requests. |
+| `INQUIRY_TO_EMAIL` | Yes, to send mail | Inbox that receives inquiries and quote requests. Default: `info@havilahagroghana.com`. |
 | `INQUIRY_FROM_EMAIL` | Yes, to send mail | Verified From address, for example `Havilah Agro <inquiries@yourdomain.com>`. |
 | `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | No | Shows the Cloudflare Turnstile widget when set. |
 | `TURNSTILE_SECRET_KEY` | No | Verifies the Turnstile token. If unset, the server skips the check. |
@@ -59,7 +59,7 @@ Home, About, Farm & Produce, Sustainability, Partners & Certifications, Gallery,
 - Partner logos, certificates, and any sustainability photographs (the home, about, produce and gallery photographs are in place)
 - Acreage, export volume and seasons
 - Partner logos (none, until written permission) and certifications (none, until a certificate is confirmed)
-- A public email address (the phone, WhatsApp, postal address and farm map are published; the email line is hidden)
+- The public email is info@havilahagroghana.com (shown with the phone, WhatsApp, postal address and farm map)
 - Social profile links
 - The Resend inbox, Turnstile keys, Analytics ID and the public site URL, until they are set in the environment
 

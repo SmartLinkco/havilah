@@ -36,13 +36,6 @@ export function Footer() {
             <li>
               <ContactActions tone="dark" />
             </li>
-            {contact.email.published ? (
-              <li>
-                <a href={contact.email.href} className="hover:text-white">
-                  {contact.email.display}
-                </a>
-              </li>
-            ) : null}
             <li>{contact.address.lines.filter((line) => visitorCopy(line)).join(", ")}</li>
           </ul>
         </div>

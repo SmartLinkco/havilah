@@ -20,10 +20,10 @@ export const contact = {
     note: "",
   },
   email: {
-    published: false,
-    display: "",
-    href: "",
-    confirmed: false,
+    published: true,
+    display: "info@havilahagroghana.com",
+    href: "mailto:info@havilahagroghana.com",
+    confirmed: true,
     note: "",
   },
   address: {
