@@ -18,7 +18,7 @@ export type ProduceItem = {
 export const produceIntro = {
   eyebrow: "Farm & produce",
   title: "Produce from the farm",
-  lede: "Sweet potatoes, watermelon, habanero pepper, mangoes and cassava, grown in Ghana for buyers at home and abroad. Prices are on request. Nothing on this page is an offer to sell online.",
+  lede: "Sweet potatoes, watermelon, habanero pepper, mangoes and cassava, grown in Ghana for buyers at home and abroad. Nothing on this page is an offer to sell online.",
 } as const;
 
 export const products: ProduceItem[] = [

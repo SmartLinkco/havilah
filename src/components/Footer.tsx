@@ -55,7 +55,7 @@ export function Footer() {
       </div>
       <div className="border-t border-white/10">
         <p className="mx-auto max-w-6xl px-5 py-4 text-xs text-green-100 sm:px-8">
-          © 2026 {site.name}. Inquiry site. No online sales.
+          © 2026 {site.name}.
         </p>
       </div>
     </footer>

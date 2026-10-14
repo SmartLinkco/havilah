@@ -105,6 +105,28 @@ h4,
   background: #e3eee6;
 }
 
+.btn-hero {
+  border: 1.5px solid #fff;
+  color: #fff;
+  background: rgb(255 255 255 / 0.1);
+}
+
+.btn-hero:hover {
+  background: rgb(255 255 255 / 0.2);
+}
+
+@media (min-width: 1024px) {
+  .btn-hero {
+    border-color: #1e5631;
+    color: #1e5631;
+    background: transparent;
+  }
+
+  .btn-hero:hover {
+    background: #e3eee6;
+  }
+}
+
 .btn-gold {
   background: #c9a13b;
   color: #1b1f1a;
@@ -270,6 +292,19 @@ h4,
 
   .lift-card:hover img {
     scale: 1.035;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .hero-frame {
+    transition: transform 0.28s ease-out;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video,
+  .hero-control {
+    display: none !important;
   }
 }
 
