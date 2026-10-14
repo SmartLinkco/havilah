@@ -86,6 +86,12 @@ h4,
     box-shadow 0.2s ease;
 }
 
+@media (min-width: 64rem) {
+  .btn.header-menu {
+    display: none;
+  }
+}
+
 .btn-primary {
   background: #1e5631;
   color: #fff;
