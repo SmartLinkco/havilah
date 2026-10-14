@@ -13,6 +13,7 @@ export function JsonLd() {
     logo: `${url}/brand/logo-primary.svg`,
     image: `${url}/og-image.png`,
     telephone: "+233244869488",
+    ...(contact.email.published ? { email: contact.email.display } : {}),
     address: {
       "@type": "PostalAddress",
       postOfficeBoxNumber: "CS 8435",

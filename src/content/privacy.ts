@@ -39,7 +39,7 @@ export const privacy = {
     {
       title: "WhatsApp, phone and maps",
       paragraphs: [
-        "WhatsApp, telephone and map links leave this site and are handled by those services. The contact page publishes a phone number, a WhatsApp link, a postal address and a map. It does not publish an email address.",
+        "WhatsApp, telephone and map links leave this site and are handled by those services. The contact page publishes a phone number, a WhatsApp link, the email address info@havilahagroghana.com, a postal address and a map.",
       ],
     },
     {
@@ -51,7 +51,7 @@ export const privacy = {
     {
       title: "Asking about your details",
       paragraphs: [
-        "To ask about an inquiry you sent, use the phone or WhatsApp number on the contact page. This notice will be updated if the farm’s process changes.",
+        "To ask about an inquiry you sent, use the phone, email or WhatsApp details on the contact page. This notice will be updated if the farm’s process changes.",
       ],
     },
   ],

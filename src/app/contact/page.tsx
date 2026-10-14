@@ -22,7 +22,7 @@ export default function ContactPage() {
   return (
     <PageTransition>
       <LegacyEnquiryRedirect hashes={legacyHashes} includeProduct />
-      <PageHero eyebrow={contact.eyebrow} title={contact.title} lede={contact.lede} />
+      <PageHero eyebrow={contact.eyebrow} title={contact.title} lead={contact.lead} lede={contact.lede} />
       <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
         <Reveal className="max-w-xl space-y-8">
           <div>

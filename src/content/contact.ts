@@ -4,7 +4,8 @@ const whatsappMessage =
 export const contact = {
   eyebrow: "Contact",
   title: "Inquire about export produce",
-  lede: "Send a note to the farm, or call and message on WhatsApp. There is no online shop.",
+  lead: "Order direct from the farm.",
+  lede: "Call us or send a message on WhatsApp — we take all orders personally.",
   whatsapp: {
     e164: "233244869488",
     display: "0244 869 488",
@@ -20,10 +21,10 @@ export const contact = {
     note: "",
   },
   email: {
-    published: false,
-    display: "",
-    href: "",
-    confirmed: false,
+    published: true,
+    display: "info@havilahagroghana.com",
+    href: "mailto:info@havilahagroghana.com",
+    confirmed: true,
     note: "",
   },
   address: {

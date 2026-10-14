@@ -10,7 +10,7 @@ import { HeroVideo } from "@/components/HeroVideo";
 import { SectionHeading } from "@/components/SectionHeading";
 import { StatStrip } from "@/components/StatStrip";
 import { partners } from "@/content/partners";
-import { cta, highlights, home, pages, site } from "@/content/site";
+import { cta, highlights, home, pages } from "@/content/site";
 import { visitorCopy } from "@/lib/visitor-copy";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -32,9 +32,12 @@ export default function HomePage() {
           <div className="hero-enter max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-100">{home.eyebrow}</p>
             <h1 className="mt-3 font-heading text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
-              {home.heading}
+              {home.heroLines.map((line) => (
+                <span key={line} className="block">
+                  {line}
+                </span>
+              ))}
             </h1>
-            <p className="mt-3 text-sm font-semibold tracking-wide text-white/90">{site.tagline}</p>
             <div className="mt-4 h-0.5 w-16 bg-gold-500" />
             {visitorCopy(home.lede) ? (
               <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/90">{visitorCopy(home.lede)}</p>
