@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { ProduceItem } from "@/content/produce";
-import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { SitePhoto } from "@/components/SitePhoto";
 import { pages } from "@/content/site";
 import { visitorCopy, visitorName } from "@/lib/visitor-copy";
@@ -27,9 +26,7 @@ export function ProduceCard({ product }: { product: ProduceItem }) {
           aspectClass="aspect-[16/9]"
           className="rounded-none"
         />
-      ) : (
-        <PlaceholderImage title={product.name} caption={product.name} className="rounded-none" />
-      )}
+      ) : null}
       <div className="flex flex-1 flex-col p-6">
         <h3 className="font-heading text-2xl font-semibold text-green-900">{visitorName(product.name)}</h3>
         {summary ? <p className="mt-3 flex-1 leading-relaxed text-ink">{summary}</p> : null}
