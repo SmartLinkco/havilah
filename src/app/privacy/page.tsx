@@ -3,6 +3,7 @@ import { PageTransition } from "@/components/PageTransition";
 import { Reveal } from "@/components/Reveal";
 import { privacy } from "@/content/privacy";
 import { pages } from "@/content/site";
+import { visitorCopy } from "@/lib/visitor-copy";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
@@ -25,9 +26,10 @@ export default function PrivacyPage() {
           <section>
             <h2 className="font-heading text-2xl font-semibold text-green-900">{section.title}</h2>
             <div className="mt-3 space-y-3 leading-relaxed">
-              {section.paragraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
+              {section.paragraphs.map((paragraph) => {
+                const text = visitorCopy(paragraph);
+                return text ? <p key={paragraph}>{text}</p> : null;
+              })}
             </div>
           </section>
           </Reveal>

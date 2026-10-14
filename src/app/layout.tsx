@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import { Analytics } from "@/components/Analytics";
-import { DraftBanner } from "@/components/DraftBanner";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
@@ -83,7 +82,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Skip to content
         </a>
         <Header />
-        <DraftBanner />
         <main id="main" className="flex-1">
           {children}
         </main>

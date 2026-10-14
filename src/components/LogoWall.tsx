@@ -1,13 +1,8 @@
-import { partnerEmpty, partners } from "@/content/partners";
+import { partners } from "@/content/partners";
 
 export function LogoWall() {
   if (partners.length === 0) {
-    return (
-      <div className="rounded-2xl border border-dashed border-soil-400/70 bg-white px-6 py-10 text-center">
-        <h3 className="font-heading text-xl font-semibold text-green-900">{partnerEmpty.title}</h3>
-        <p className="mx-auto mt-3 max-w-2xl leading-relaxed text-ink">{partnerEmpty.text}</p>
-      </div>
-    );
+    return null;
   }
 
   return (

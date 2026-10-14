@@ -4,6 +4,7 @@ import Script from "next/script";
 import { useId, useState, type FormEvent } from "react";
 import { forms, contact } from "@/content/contact";
 import { interestOptions } from "@/content/produce";
+import { visitorName } from "@/lib/visitor-copy";
 import { pages } from "@/content/site";
 import type { InquiryIntent } from "@/lib/inquiry";
 
@@ -177,7 +178,7 @@ export function InquiryForm({ copy }: { copy: FormCopy }) {
           >
             {interestOptions.map((option) => (
               <option key={option.value} value={option.value}>
-                {option.label}
+                {visitorName(option.label)}
               </option>
             ))}
           </select>

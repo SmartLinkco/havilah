@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getSiteUrl } from "@/lib/site-url";
+import { visitorCopy } from "@/lib/visitor-copy";
 
 const ogImage = {
   url: "/og-image.png",
@@ -15,14 +16,15 @@ export function pageMetadata(input: {
   absolute?: boolean;
 }): Metadata {
   const canonical = new URL(input.path, getSiteUrl()).toString();
+  const description = visitorCopy(input.description);
 
   return {
     title: input.absolute ? { absolute: input.title } : input.title,
-    description: input.description,
+    description,
     alternates: { canonical: input.path },
     openGraph: {
       title: input.title,
-      description: input.description,
+      description,
       url: canonical,
       images: [ogImage],
     },

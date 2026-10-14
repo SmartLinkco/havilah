@@ -6,6 +6,7 @@ import { Reveal } from "@/components/Reveal";
 import { exportSteps, produceIntro, products } from "@/content/produce";
 import { forms } from "@/content/contact";
 import { pages } from "@/content/site";
+import { visitorCopy } from "@/lib/visitor-copy";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
@@ -43,7 +44,9 @@ export default function FarmPage() {
                   0{index + 1}
                 </p>
                 <h3 className="mt-3 font-heading text-xl font-semibold">{step.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-green-100">{step.text}</p>
+                {visitorCopy(step.text) ? (
+                  <p className="mt-2 text-sm leading-relaxed text-green-100">{visitorCopy(step.text)}</p>
+                ) : null}
               </div>
                 </Reveal>
               </li>

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import { contact } from "@/content/contact";
 import { navItems, pages, site } from "@/content/site";
+import { visitorCopy } from "@/lib/visitor-copy";
 
 export function Footer() {
   return (
@@ -35,7 +36,6 @@ export function Footer() {
               <a href={contact.whatsapp.href} className="hover:text-white">
                 WhatsApp {contact.whatsapp.display}
               </a>
-              {contact.whatsapp.confirmed ? null : <span className="mt-1 block text-gold-100">Number to be confirmed</span>}
             </li>
             <li>
               <a href={contact.phone.href} className="hover:text-white">
@@ -47,7 +47,7 @@ export function Footer() {
                 {contact.email.display}
               </a>
             </li>
-            <li>{contact.address.lines.join(", ")}</li>
+            <li>{contact.address.lines.filter((line) => visitorCopy(line)).join(", ")}</li>
           </ul>
         </div>
       </div>

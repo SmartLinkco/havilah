@@ -6,6 +6,7 @@ import { Reveal } from "@/components/Reveal";
 import { SitePhoto } from "@/components/SitePhoto";
 import { about } from "@/content/about";
 import { pages } from "@/content/site";
+import { visitorCopy } from "@/lib/visitor-copy";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
@@ -23,9 +24,10 @@ export default function AboutPage() {
           <h2 className="font-heading text-3xl font-semibold text-green-900">{about.storyTitle}</h2>
           <div className="mt-4 h-0.5 w-16 bg-gold-500" />
           <div className="mt-5 space-y-4 text-lg leading-relaxed">
-            {about.story.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
+            {about.story.map((paragraph) => {
+              const text = visitorCopy(paragraph);
+              return text ? <p key={paragraph}>{text}</p> : null;
+            })}
           </div>
         </Reveal>
         <Reveal className="space-y-6" delay={90}>
@@ -57,7 +59,7 @@ export default function AboutPage() {
       <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
         <Reveal>
           <h2 className="font-heading text-3xl font-semibold text-green-900">{about.teamTitle}</h2>
-          <p className="mt-4 max-w-2xl text-lg">{about.teamLede}</p>
+          {visitorCopy(about.teamLede) ? <p className="mt-4 max-w-2xl text-lg">{visitorCopy(about.teamLede)}</p> : null}
         </Reveal>
         <ul className="mt-8 grid gap-5 md:grid-cols-3">
           {about.team.map((person, index) => (
@@ -73,7 +75,9 @@ export default function AboutPage() {
                   />
                   <div className="p-5">
                     <h3 className="font-heading text-xl font-semibold text-green-900">{person.role}</h3>
-                    <p className="mt-2 text-sm leading-relaxed">{person.text}</p>
+                    {visitorCopy(person.text) ? (
+                      <p className="mt-2 text-sm leading-relaxed">{visitorCopy(person.text)}</p>
+                    ) : null}
                   </div>
                 </article>
               </Reveal>
@@ -84,7 +88,9 @@ export default function AboutPage() {
       <section className="bg-green-100">
         <Reveal className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
           <h2 className="font-heading text-3xl font-semibold text-green-900">{about.approachTitle}</h2>
-          <p className="mt-4 max-w-3xl text-lg leading-relaxed">{about.approach}</p>
+          {visitorCopy(about.approach) ? (
+            <p className="mt-4 max-w-3xl text-lg leading-relaxed">{visitorCopy(about.approach)}</p>
+          ) : null}
           <Link href={pages.sustainability.path} className="btn btn-primary mt-8">
             Read the sustainability page
           </Link>
