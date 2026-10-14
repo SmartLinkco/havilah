@@ -55,8 +55,7 @@ Home, About, Farm & Produce, Sustainability, Partners & Certifications, Gallery,
 
 ## Still placeholder
 
-- Page copy, apart from the company name, the export aim of 80–90%, and the decision to take inquiries rather than sell online
-- The working tagline “Grown in Ghana. Trusted worldwide.”, which is the line on the social image and can still be revised
+- The tagline is “Rooted in Ghana, Reaching the World”
 - Partner logos, certificates, and any sustainability photographs (the home, about, produce and gallery photographs are in place)
 - Acreage, export volume and seasons
 - Partner logos (none, until written permission) and certifications (none, until a certificate is confirmed)

@@ -1,9 +1,9 @@
 export const site = {
   name: "Havilah Agro Ghana Limited",
   shortName: "Havilah Agro",
-  tagline: "Grown in Ghana. Trusted worldwide.",
+  tagline: "Rooted in Ghana, Reaching the World",
   description:
-    "Havilah Agro Ghana Limited is an export-focused Ghanaian farm. The site introduces the business and takes buyer inquiries. There is no online shop.",
+    "Rooted in Ghana, Reaching the World. Havilah Agro Ghana Limited is a Ghanaian agribusiness that grows, processes, and supplies premium produce to buyers at home and abroad.",
   draftNotice:
     "Draft site. Much of the wording, and the figures for acreage, volume and seasons, are still to be confirmed. The leaf-and-globe logo is the official mark.",
 } as const;
@@ -35,7 +35,7 @@ export const pages: Record<
     navLabel: "Home",
     title: "Havilah Agro Ghana Limited",
     description:
-      "Export-focused farm in Ghana. About 80–90% of production is aimed at buyers abroad. Inquire directly. No online sales.",
+      "Rooted in Ghana, Reaching the World. Havilah Agro Ghana Limited grows, processes, and supplies premium produce to buyers at home and abroad.",
     inNav: true,
     changeFrequency: "monthly",
     priority: 1,
@@ -45,7 +45,7 @@ export const pages: Record<
     navLabel: "About",
     title: "About",
     description:
-      "The story, mission and approach of Havilah Agro Ghana Limited. Team profiles will be added when the farm confirms them.",
+      "Havilah Agro Ghana Limited grows, processes, and supplies premium produce to buyers at home and abroad. Rooted in Ghana, Reaching the World.",
     inNav: true,
     changeFrequency: "monthly",
     priority: 0.8,
@@ -53,9 +53,9 @@ export const pages: Record<
   farm: {
     path: "/farm",
     navLabel: "Farm & Produce",
-    title: "Farm & Produce",
+    title: "Our Produce",
     description:
-      "Sweet potatoes, watermelon, habanero pepper, mangoes and cassava from the farm in Ghana.",
+      "Supplied to buyers in Ghana and exported to international markets. Fresh harvest and processed products from Havilah Agro Ghana Limited.",
     inNav: true,
     changeFrequency: "monthly",
     priority: 0.8,
@@ -64,8 +64,7 @@ export const pages: Record<
     path: "/sustainability",
     navLabel: "Sustainability",
     title: "Sustainability",
-    description:
-      "How Havilah Agro intends to combine organic and inorganic methods. These notes are not certifications or audited claims.",
+    description: "We farm with the future in mind, caring for the land that feeds us.",
     inNav: true,
     changeFrequency: "monthly",
     priority: 0.7,
@@ -137,12 +136,13 @@ export const highlights = [
 
 export const home = {
   eyebrow: "Export farming · Ghana",
-  lede: "Havilah Agro Ghana Limited grows sweet potatoes, watermelon, habanero pepper, mangoes and cassava for buyers who need a clear Ghanaian origin.",
+  heading: "Grown in Ghana. Trusted worldwide.",
+  lede: "Havilah Agro Ghana Limited supplies sweet potatoes, mangoes, watermelon and habanero pepper, plus dried mangoes, sweet potato products, and cassava as flour, starch and chips, for buyers who need a clear Ghanaian origin.",
   introTitle: "A farm prepared for export conversations",
   intro:
     "Buyers, partners and investors can see how the business is set up: an export aim of 80–90%, a sustainability-led approach, and a mix of organic and inorganic methods. Figures for acreage, volume and season will be added when they are confirmed.",
   produceTitle: "Produce",
-  produceLede: "Sweet potatoes, watermelon, habanero pepper, mangoes and cassava.",
+  produceLede: "Supplied to buyers in Ghana and exported to international markets.",
   partnersTitle: "Partners",
   partnersLede:
     "A logo strip will sit here after each partner has given written permission. No logos are shown before that.",

@@ -1,7 +1,7 @@
 export const sustainability = {
   eyebrow: "Our approach",
-  title: "Organic and inorganic, used with a reason",
-  lede: "Havilah Agro has described a sustainability-led farm that uses both organic and inorganic methods. The notes below are the shape of that story. They are not audited results, and they are not a certification.",
+  title: "Sustainability",
+  lede: "We farm with the future in mind, caring for the land that feeds us.",
   practicesTitle: "Practices to document",
   practices: [
     {
@@ -14,7 +14,7 @@ export const sustainability = {
     },
     {
       title: "Inputs",
-      text: "Where an organic method is used, and where an inorganic input is used, each choice should be explainable to a buyer.",
+      text: "",
     },
     {
       title: "Harvest handling",
@@ -26,13 +26,13 @@ export const sustainability = {
     },
     {
       title: "People",
-      text: "Working conditions will be stated by the farm. This page does not imply an audit or a labour certificate.",
+      text: "We grow by growing our farmers and communities.",
     },
   ],
   commitmentsTitle: "Commitments",
   commitments: [
     "Publish only practices the farm can describe in its own words.",
-    "Keep organic and inorganic methods distinct, so neither is used as cover for the other.",
+    "Sustainable, well-managed farming.",
     "Show certifications only after a document is confirmed.",
     "Prefer a precise figure later over a flattering figure now.",
   ],

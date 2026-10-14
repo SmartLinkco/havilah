@@ -60,7 +60,7 @@ export function Header() {
         </nav>
         <button
           type="button"
-          className="btn btn-secondary px-4 lg:hidden"
+          className="header-menu btn btn-secondary px-4 lg:hidden"
           aria-expanded={open}
           aria-controls={panelId}
           onClick={() => setOpen((value) => !value)}

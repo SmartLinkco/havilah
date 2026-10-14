@@ -1,63 +1,71 @@
 export const about = {
-  eyebrow: "About the farm",
-  title: "A Ghanaian farm, introduced with care",
-  lede: "This page is draft copy. It states only what is already known about the business, and the farm’s own wording will replace it.",
-  storyTitle: "Story",
-  story: [
-    "Havilah Agro Ghana Limited is a farm business in Ghana with an export aim of about 80–90% of production. The website exists to build trust and to receive inquiries. It does not take orders or payments.",
-    "The farm uses both organic and inorganic methods. Sustainability is the guide for how those methods are chosen. That is an intention, not a certificate.",
-    "The fuller story — when the farm started, who leads it, and how the land is managed — will be written from the farm’s own notes.",
+  eyebrow: "About",
+  title: "About Us",
+  statement:
+    "Havilah Agro Ghana Limited is a Ghanaian agribusiness that grows, processes, and supplies premium produce to buyers at home and abroad. We work alongside local farmers, giving them the inputs, guidance, and standards they need, so that every harvest meets international quality and earns its full value. Every step from farm to market is traceable, and the rewards are shared: more jobs, stronger farming communities, and foreign exchange for Ghana.",
+  whyTitle: "Why Havilah",
+  why: [
+    "Local and export supply",
+    "Farmers share in export earnings",
+    "Farm-to-market traceability",
+    "Sustainable, well-managed farming",
   ],
-  missionTitle: "Mission",
+  visionTitle: "Our Vision",
+  vision: "To carry the abundance of Havilah from Ghana’s soil to the world’s tables.",
+  missionTitle: "Our Mission",
   mission:
-    "To grow produce in Ghana that export buyers can trace to a named farm, and to answer inquiries clearly.",
-  visionTitle: "Vision",
-  vision:
-    "To be a steady supply partner for buyers who want Ghanaian origin, careful handling and a long-term conversation.",
-  approachTitle: "Approach",
-  approach:
-    "Organic and inorganic tools are both available. The farm’s standard is to use each one for a stated reason, keep records buyers can ask about, and avoid claims that have not been evidenced. The sustainability page expands on that, still without presenting unaudited results.",
+    "To grow, process, and supply high-quality Ghanaian produce to local and international markets, while empowering local farmers and upholding sustainable and traceable practices.",
+  valuesTitle: "Our Values",
+  values: [
+    {
+      title: "Sustainability",
+      text: "We farm with the future in mind, caring for the land that feeds us.",
+    },
+    {
+      title: "Integrity",
+      text: "We do honest business, from farm to market, with transparency at every step.",
+    },
+    {
+      title: "Quality",
+      text: "We hold every harvest to international standards because our name travels with it.",
+    },
+    {
+      title: "Empowerment",
+      text: "We grow by growing our farmers and communities.",
+    },
+  ],
+  workTitle: "What We Do",
+  work: [
+    {
+      title: "Farming and Crop Management",
+      text: "We grow export-grade produce using sustainable, well-managed farming practices.",
+    },
+    {
+      title: "Processing and Value Addition",
+      text: "We turn harvests into products that last longer, travel better, and earn more in global markets.",
+    },
+    {
+      title: "Farmer Partnership and Advisory",
+      text: "We work with local farmers, supplying inputs and guidance so they can meet international standards and share export earnings.",
+    },
+  ],
+  founder: {
+    id: "founder",
+    title: "Meet Our Founder",
+    name: "Harry Boakye Ofori-Attah Esq.",
+    role: "Founder & Managing Director, Havilah Agro",
+    initials: "HO",
+    teaser:
+      "Harry Boakye Ofori-Attah Esq. is a business leader, entrepreneur, and chartered professional whose passion for agriculture gave birth to Havilah Agro.",
+    paragraphs: [
+      "Harry Boakye Ofori-Attah Esq. is a business leader, entrepreneur, and chartered professional whose passion for agriculture gave birth to Havilah Agro. With over a decade of experience in business management and enterprise growth, he brings corporate discipline, integrity, and vision to modern farming.",
+      "He is driven by a simple purpose: to build a sustainable, thriving agribusiness that promotes food security, creates lasting value from Ghana's rich land, and carries Ghanaian produce to the world.",
+    ],
+  },
   storyImage: {
     src: "/images/about-story.webp",
     alt: "Two people walk away along a dirt path between green fields, toward a line of tall trees.",
     width: 1280,
     height: 720,
   },
-  teamTitle: "Team",
-  teamLede: "Names and short biographies are still to be confirmed.",
-  team: [
-    {
-      id: "leadership",
-      role: "Leadership profile",
-      text: "Name and short biography to be confirmed.",
-      image: {
-        src: "/images/team-leadership.webp",
-        alt: "A man in a light shirt stands among leafy crop rows on the farm.",
-        width: 1280,
-        height: 720,
-      },
-    },
-    {
-      id: "operations",
-      role: "Farm operations profile",
-      text: "Name and short biography to be confirmed.",
-      image: {
-        src: "/images/team-operations.webp",
-        alt: "A woman in a green work shirt and cap stands in a crop row, looking across the field.",
-        width: 1280,
-        height: 720,
-      },
-    },
-    {
-      id: "export",
-      role: "Export desk profile",
-      text: "Name and short biography to be confirmed.",
-      image: {
-        src: "/images/team-export.webp",
-        alt: "A woman holding a tablet stands beside stacked sacks of produce in a packing area.",
-        width: 1280,
-        height: 720,
-      },
-    },
-  ],
 } as const;

@@ -89,12 +89,12 @@ export function HeroVideo({ className = "" }: { className?: string }) {
           alt={showVideo ? "" : home.hero.alt}
           fill
           priority
-          sizes="(min-width: 1024px) 36rem, 100vw"
+          sizes="100vw"
           className="object-cover"
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-[#0c2416]/82 via-[#0c2416]/55 to-[#07160e]/86 lg:hidden"
+          className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-[#0c2416]/84 via-[#0c2416]/58 to-[#07160e]/88"
         />
         {showVideo ? (
           <video
@@ -118,7 +118,7 @@ export function HeroVideo({ className = "" }: { className?: string }) {
       {showVideo ? (
         <button
           type="button"
-          className="hero-control absolute right-4 bottom-4 z-30 flex h-11 w-11 items-center justify-center rounded-full bg-white/90 text-green-900 shadow-md lg:right-3 lg:bottom-3"
+          className="hero-control absolute right-4 bottom-4 z-30 flex h-11 w-11 items-center justify-center rounded-full bg-white/90 text-green-900 shadow-md"
           aria-label={playing ? "Pause hero video" : "Play hero video"}
           aria-pressed={playing}
           onClick={togglePlayback}

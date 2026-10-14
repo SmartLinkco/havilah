@@ -20,7 +20,7 @@ export function JsonLd() {
       addressCountry: "GH",
     },
     hasMap: contact.map.directionsUrl,
-    areaServed: "Export markets",
+    areaServed: "Ghana and international markets",
   };
 
   return (

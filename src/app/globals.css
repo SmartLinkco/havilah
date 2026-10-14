@@ -86,6 +86,12 @@ h4,
     box-shadow 0.2s ease;
 }
 
+@media (min-width: 64rem) {
+  .btn.header-menu {
+    display: none;
+  }
+}
+
 .btn-primary {
   background: #1e5631;
   color: #fff;
@@ -113,18 +119,6 @@ h4,
 
 .btn-hero:hover {
   background: rgb(255 255 255 / 0.2);
-}
-
-@media (min-width: 1024px) {
-  .btn-hero {
-    border-color: #1e5631;
-    color: #1e5631;
-    background: transparent;
-  }
-
-  .btn-hero:hover {
-    background: #e3eee6;
-  }
 }
 
 .btn-gold {
