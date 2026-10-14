@@ -32,7 +32,7 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-green-100 bg-cream/95 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-green-100 bg-cream">
       <div className="h-1 bg-green-700" />
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
         <Link href="/" className="shrink-0 rounded-sm">
