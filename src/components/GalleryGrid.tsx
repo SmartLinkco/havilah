@@ -106,6 +106,7 @@ export function GalleryGrid() {
                 <PlaceholderImage title={item.title} caption={item.caption} />
               )}
               <span className="mt-3 block font-heading text-lg font-semibold text-green-900">{item.title}</span>
+              <span className="mt-1 block text-sm leading-relaxed text-soil-700">{item.caption}</span>
               <span className="sr-only">Open larger view</span>
             </button>
             </Reveal>
