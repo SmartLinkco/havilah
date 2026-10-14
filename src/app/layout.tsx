@@ -5,6 +5,7 @@ import { DraftBanner } from "@/components/DraftBanner";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
+import { MarkEntered } from "@/components/MarkEntered";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { site } from "@/content/site";
 import { getSiteUrl } from "@/lib/site-url";
@@ -72,6 +73,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${inter.variable} ${montserrat.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.classList.add('js')",
+          }}
+        />
+        <MarkEntered />
         <a href="#main" className="skip-link">
           Skip to content
         </a>

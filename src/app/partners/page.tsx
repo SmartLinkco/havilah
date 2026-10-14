@@ -1,5 +1,7 @@
 import { LogoWall } from "@/components/LogoWall";
 import { PageHero } from "@/components/PageHero";
+import { PageTransition } from "@/components/PageTransition";
+import { Reveal } from "@/components/Reveal";
 import { certificationEmpty, certifications, partnersIntro } from "@/content/partners";
 import { pages } from "@/content/site";
 import { pageMetadata } from "@/lib/metadata";
@@ -12,13 +14,16 @@ export const metadata = pageMetadata({
 
 export default function PartnersPage() {
   return (
-    <>
+    <PageTransition>
       <PageHero eyebrow={partnersIntro.eyebrow} title={partnersIntro.title} lede={partnersIntro.lede} />
       <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
-        <LogoWall />
+        <Reveal>
+          <LogoWall />
+        </Reveal>
       </section>
       <section className="bg-white">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
+          <Reveal>
           <h2 className="font-heading text-3xl font-semibold text-green-900">{certificationEmpty.title}</h2>
           {certifications.length === 0 ? (
             <p className="mt-4 max-w-3xl text-lg leading-relaxed">{certificationEmpty.text}</p>
@@ -33,8 +38,9 @@ export default function PartnersPage() {
               ))}
             </ul>
           )}
+          </Reveal>
         </div>
       </section>
-    </>
+    </PageTransition>
   );
 }

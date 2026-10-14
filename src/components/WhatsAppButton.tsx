@@ -5,6 +5,7 @@ export function WhatsAppButton() {
     <a
       href={contact.whatsapp.href}
       className="btn btn-primary fixed right-4 bottom-4 z-40 shadow-lg sm:right-6 sm:bottom-6"
+      style={{ viewTransitionName: "site-whatsapp" }}
       target="_blank"
       rel="noopener noreferrer"
     >
