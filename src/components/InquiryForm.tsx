@@ -33,7 +33,7 @@ function trackInquiry(intent: InquiryIntent) {
   }
 }
 
-export function InquiryForm({ copy }: { copy: FormCopy }) {
+export function InquiryForm({ copy, pageHeading = false }: { copy: FormCopy; pageHeading?: boolean }) {
   const baseId = useId();
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -116,7 +116,9 @@ export function InquiryForm({ copy }: { copy: FormCopy }) {
   if (status === "success") {
     return (
       <div role="status" className="rounded-2xl border border-green-100 bg-white p-6 sm:p-8">
-        <h3 className="font-heading text-2xl font-semibold text-green-900">{copy.title}</h3>
+        <Heading pageHeading={pageHeading} className="font-heading text-2xl font-semibold text-green-900">
+          {copy.title}
+        </Heading>
         <p className="mt-3 leading-relaxed">{message}</p>
         <div className="mt-6 flex flex-wrap gap-3">
           <a href={whatsappUrl} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
@@ -137,7 +139,9 @@ export function InquiryForm({ copy }: { copy: FormCopy }) {
       noValidate
       className="scroll-mt-28 rounded-2xl border border-green-100 bg-white p-6 shadow-sm sm:p-8"
     >
-      <h3 className="font-heading text-2xl font-semibold text-green-900">{copy.title}</h3>
+      <Heading pageHeading={pageHeading} className="font-heading text-2xl font-semibold text-green-900">
+        {copy.title}
+      </Heading>
       <p className="mt-2 text-ink">{copy.lede}</p>
 
       {status === "error" ? (
@@ -291,6 +295,21 @@ export function InquiryForm({ copy }: { copy: FormCopy }) {
       </button>
     </form>
   );
+}
+
+function Heading({
+  pageHeading,
+  className,
+  children,
+}: {
+  pageHeading: boolean;
+  className: string;
+  children: string;
+}) {
+  if (pageHeading) {
+    return <h1 className={className}>{children}</h1>;
+  }
+  return <h3 className={className}>{children}</h3>;
 }
 
 function Field({

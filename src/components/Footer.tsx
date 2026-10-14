@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ContactActions } from "@/components/ContactActions";
 import { Logo } from "@/components/Logo";
 import { contact } from "@/content/contact";
 import { navItems, pages, site } from "@/content/site";
@@ -33,14 +34,7 @@ export function Footer() {
           <h2 className="font-heading text-lg font-semibold">Contact</h2>
           <ul className="mt-4 space-y-2 text-sm text-green-100">
             <li>
-              <a href={contact.whatsapp.href} className="hover:text-white">
-                WhatsApp {contact.whatsapp.display}
-              </a>
-            </li>
-            <li>
-              <a href={contact.phone.href} className="hover:text-white">
-                {contact.phone.display}
-              </a>
+              <ContactActions tone="dark" />
             </li>
             {contact.email.published ? (
               <li>

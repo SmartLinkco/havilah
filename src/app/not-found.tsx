@@ -15,7 +15,7 @@ export default function NotFound() {
         <Link href={pages.home.path} className="btn btn-primary">
           Back to home
         </Link>
-        <Link href={`${pages.contact.path}#inquiry`} className="btn btn-secondary">
+        <Link href={pages.enquiry.path} className="btn btn-secondary">
           Make an inquiry
         </Link>
       </div>

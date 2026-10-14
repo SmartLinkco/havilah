@@ -49,18 +49,18 @@ export const forms = {
   inquiry: {
     id: "inquiry",
     intent: "inquiry" as const,
-    title: "Make an inquiry",
-    lede: "Share a little about the produce you need. Fields marked required must be completed. This form does not place an order.",
-    submit: "Send inquiry",
+    title: "Send us an enquiry",
+    lede: "Tell us what you need and we'll get back to you with pricing and availability. Volumes can be approximate.",
+    submit: "Send enquiry",
     success:
       "Thank you. Your inquiry has been sent to Havilah Agro. If you need a faster reply, use WhatsApp.",
   },
   quote: {
     id: "quote",
     intent: "quote" as const,
-    title: "Request a quote",
-    lede: "Tell the farm what you want priced. Volume can be approximate. This request does not reserve stock.",
-    submit: "Request a quote",
+    title: "Send us an enquiry",
+    lede: "Tell us what you need and we'll get back to you with pricing and availability. Volumes can be approximate.",
+    submit: "Send enquiry",
     success:
       "Thank you. Your quote request has been sent to Havilah Agro. If you need a faster reply, use WhatsApp.",
   },

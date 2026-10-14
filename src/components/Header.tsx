@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useState } from "react";
 import { Logo } from "@/components/Logo";
-import { cta, navItems } from "@/content/site";
+import { cta, navItems, pages } from "@/content/site";
 
 export function Header() {
   const pathname = usePathname();
@@ -54,7 +54,7 @@ export function Header() {
               </Link>
             );
           })}
-          <Link href="/contact#inquiry" className="btn btn-primary px-4 py-2 text-sm">
+          <Link href={pages.enquiry.path} className="btn btn-primary px-4 py-2 text-sm">
             {cta.inquiry}
           </Link>
         </nav>
@@ -86,7 +86,7 @@ export function Header() {
               </li>
             ))}
           </ul>
-          <Link href="/contact#inquiry" className="btn btn-primary mt-6 w-full">
+          <Link href={pages.enquiry.path} className="btn btn-primary mt-6 w-full">
             {cta.inquiry}
           </Link>
         </nav>
