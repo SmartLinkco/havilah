@@ -71,7 +71,7 @@ export function Header() {
       {open ? (
         <nav
           id={panelId}
-          className="menu-panel fixed inset-x-0 top-[4.25rem] bottom-0 z-30 overflow-y-auto bg-cream px-5 py-6 sm:top-[4.5rem] lg:hidden"
+          className="menu-panel absolute inset-x-0 top-full z-30 h-[calc(100dvh-100%)] overflow-y-auto bg-cream px-5 py-6 lg:hidden"
           aria-label="Mobile"
         >
           <ul className="space-y-2">
