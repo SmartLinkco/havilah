@@ -115,16 +115,40 @@ export const navItems = (Object.keys(pages) as PageKey[])
   .filter((key) => pages[key].inNav)
   .map((key) => pages[key]);
 
+export const highlights = [
+  {
+    title: "Export focus",
+    text: "The farm aims to export about 80–90% of what it grows. The balance stays closer to home. Operating volumes are still to be confirmed.",
+  },
+  {
+    title: "Sustainability-led",
+    text: "Stewardship of the land guides the work. Specific practices will be published when the farm can describe them precisely.",
+  },
+  {
+    title: "Organic and inorganic",
+    text: "Both methods are part of the approach. They are combined with a reason, not presented as a certified organic claim.",
+  },
+  {
+    title: "Built for buyers",
+    text: "The site is for trust and inquiries. There is no catalogue checkout and no online payment.",
+  },
+] as const;
+
 export const home = {
-  eyebrow: "",
-  lede: "",
-  produceTitle: "Our Produce",
+  eyebrow: "Export farming · Ghana",
+  heading: "Grown in Ghana. Trusted worldwide.",
+  lede: "Havilah Agro Ghana Limited supplies sweet potatoes, mangoes, watermelon and habanero pepper, plus dried mangoes, sweet potato products, and cassava as flour, starch and chips, for buyers who need a clear Ghanaian origin.",
+  introTitle: "A farm prepared for export conversations",
+  intro:
+    "Buyers, partners and investors can see how the business is set up: an export aim of 80–90%, a sustainability-led approach, and a mix of organic and inorganic methods. Figures for acreage, volume and season will be added when they are confirmed.",
+  produceTitle: "Produce",
   produceLede: "Supplied to buyers in Ghana and exported to international markets.",
   partnersTitle: "Partners",
   partnersLede:
     "A logo strip will sit here after each partner has given written permission. No logos are shown before that.",
-  sustainabilityTitle: "Sustainability",
-  sustainabilityLede: "We farm with the future in mind, caring for the land that feeds us.",
+  sustainabilityTitle: "How the farm intends to work",
+  sustainabilityLede:
+    "Organic and inorganic methods sit in one plan. The sustainability page sets out that intention without claiming certificates the farm has not provided.",
   ctaTitle: "Start an export conversation",
   ctaText:
     "Tell us the product, the country and an approximate volume. The inquiry goes to the farm by email, with WhatsApp as the fallback while mail is being set up.",
