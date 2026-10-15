@@ -33,9 +33,9 @@ export const galleryItems: GalleryItem[] = [
     caption: "Fresh white yam from the farm.",
     image: {
       src: "/images/products/yam.webp",
-      alt: "A stack of long white yam tubers with rough brown skin on red farm soil, one cut to show the white flesh.",
-      width: 1280,
-      height: 720,
+      alt: "A pile of thick, dark-brown white yam tubers with rough bark-like skin, one cut open to show bright white flesh.",
+      width: 1600,
+      height: 900,
     },
   },
   {
