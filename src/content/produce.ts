@@ -126,6 +126,18 @@ export const produceGroups: { id: string; title: string; products: ProduceItem[]
           height: 720,
         },
       },
+      {
+        id: "chilli-powder",
+        name: "Chilli Powder",
+        description: "Fine red chilli powder with a warm, lasting heat.",
+        benefits: processedBenefits,
+        image: {
+          src: "/images/products/chilli-powder.webp",
+          alt: "A wooden bowl of bright red chilli powder beside a few dried red chillies on a wooden table.",
+          width: 1280,
+          height: 720,
+        },
+      },
     ],
   },
 ];

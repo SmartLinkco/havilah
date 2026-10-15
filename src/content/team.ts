@@ -21,7 +21,7 @@ export const founder = {
   id: "founder",
   teaserTitle: "Meet Our Founder",
   name: "Harry Boakye Ofori-Attah Esq.",
-  role: "Founder & Managing Director, Havilah Agro",
+  role: "Founder & CEO",
   teaser:
     "Harry Boakye Ofori-Attah Esq. is a business leader, entrepreneur, and chartered professional whose passion for agriculture gave birth to Havilah Agro.",
   paragraphs: [
@@ -33,17 +33,17 @@ export const founder = {
 
 export const directors: TeamMember[] = [
   {
-    id: "director-1",
-    name: "Director name",
+    id: "daniel-adjei",
+    name: "Daniel Adjei",
     role: "Director",
-    bio: "A short biography for this director.",
-    portrait: { kind: "silhouette" },
+    bio: "Director, Havilah Agro Ghana Limited.",
+    portrait: { kind: "initials", initials: "DA" },
   },
   {
-    id: "director-2",
-    name: "Director name",
+    id: "selorm-sepenu",
+    name: "Selorm Sepenu",
     role: "Director",
-    bio: "A short biography for this director.",
-    portrait: { kind: "silhouette" },
+    bio: "Director, Havilah Agro Ghana Limited.",
+    portrait: { kind: "initials", initials: "SS" },
   },
 ];

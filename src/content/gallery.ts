@@ -63,6 +63,18 @@ export const galleryItems: GalleryItem[] = [
     },
   },
   {
+    id: "chilli-powder",
+    category: "processing",
+    title: "Chilli powder",
+    caption: "Ground red chilli with a few dried chillies.",
+    image: {
+      src: "/images/products/chilli-powder.webp",
+      alt: "A wooden bowl of bright red chilli powder beside a few dried red chillies on a wooden table.",
+      width: 1280,
+      height: 720,
+    },
+  },
+  {
     id: "mango-orchard",
     category: "crops",
     title: "Mango orchard",
