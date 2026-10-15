@@ -30,10 +30,10 @@ export const produceGroups: { id: string; title: string; products: ProduceItem[]
         description: "Firm white yam with a rich, earthy taste.",
         benefits: freshBenefits,
         image: {
-          src: "/images/products/yam.webp",
-          alt: "A stack of long white yam tubers with rough brown skin on red farm soil, one cut to show the white flesh.",
-          width: 1280,
-          height: 720,
+          src: "/images/products/yam-v5.webp",
+          alt: "A pile of thick grey-brown Ghanaian yam tubers with crinkly bark-like skin on red farm soil, two cut across to show creamy-white flesh.",
+          width: 1600,
+          height: 900,
         },
       },
       {
@@ -87,7 +87,7 @@ export const produceGroups: { id: string; title: string; products: ProduceItem[]
       {
         id: "chilli-pepper",
         name: "Chilli Pepper",
-        description: "Slender red and green chillies with a bright, lively heat.",
+        description: "Slender red chillies with a bright, lively heat.",
         benefits: freshBenefits,
         image: {
           src: "/images/products/chilli-pepper.webp",
