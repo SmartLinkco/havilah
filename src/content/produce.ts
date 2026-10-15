@@ -31,7 +31,7 @@ export const produceGroups: { id: string; title: string; products: ProduceItem[]
         benefits: freshBenefits,
         image: {
           src: "/images/products/yam.webp",
-          alt: "A pile of thick, dark-brown white yam tubers with rough bark-like skin, one cut open to show bright white flesh.",
+          alt: "A Ghanaian yam-market pile of huge, dark, bark-skinned yam tubers standing on end, one cut across to show a round white face.",
           width: 1600,
           height: 900,
         },
