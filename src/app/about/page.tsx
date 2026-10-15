@@ -19,8 +19,7 @@ export default function AboutPage() {
       <section className="border-b border-green-100 bg-green-100">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-[1.15fr_0.85fr]">
           <Reveal>
-            <p className="eyebrow">{about.eyebrow}</p>
-            <h1 className="mt-3 max-w-3xl font-heading text-4xl font-semibold tracking-tight text-green-900 sm:text-5xl">
+            <h1 className="max-w-3xl font-heading text-4xl font-semibold tracking-tight text-green-900 sm:text-5xl">
               {about.title}
             </h1>
             <div className="mt-4 h-0.5 w-16 bg-gold-500" />

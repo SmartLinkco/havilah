@@ -15,7 +15,6 @@ const freshBenefits = ["Farm-fresh", "Bulk orders", "Reliable supply"] as const;
 const processedBenefits = ["Bulk orders", "Reliable supply"] as const;
 
 export const produceIntro = {
-  eyebrow: "Produce",
   title: "Our Produce",
   lede: "Supplied to buyers in Ghana and exported to international markets.",
 } as const;

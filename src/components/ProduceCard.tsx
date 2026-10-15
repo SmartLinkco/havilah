@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { ProduceItem } from "@/content/produce";
 import { SitePhoto } from "@/components/SitePhoto";
 import { contact } from "@/content/contact";
-import { pages } from "@/content/site";
+import { cta, pages } from "@/content/site";
 import { visitorCopy, visitorName } from "@/lib/visitor-copy";
 
 function whatsappOrderHref(productName: string) {
@@ -40,7 +40,7 @@ export function ProduceCard({ product }: { product: ProduceItem }) {
         ) : null}
         <div className="mt-5 flex flex-wrap gap-3">
           <Link href={quoteHref} className="btn btn-primary">
-            Request a quote
+            {cta.quote}
           </Link>
           <a
             href={whatsappOrderHref(product.name)}
