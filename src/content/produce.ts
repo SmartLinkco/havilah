@@ -91,9 +91,9 @@ export const produceGroups: { id: string; title: string; products: ProduceItem[]
         benefits: freshBenefits,
         image: {
           src: "/images/products/chilli-pepper.webp",
-          alt: "A woven basket of long red and green chilli peppers on red soil, with chilli plants behind.",
-          width: 1280,
-          height: 720,
+          alt: "Three glossy red chilli peppers hanging from a green plant, with water droplets, fresh leaves, and warm sunrise light.",
+          width: 1600,
+          height: 900,
         },
       },
     ],
