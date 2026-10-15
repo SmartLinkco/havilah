@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
 import { FeatureCard } from "@/components/FeatureCard";
-import { FounderTeaser } from "@/components/Founder";
+import { FounderTeaser } from "@/components/Team";
 import { LogoWall } from "@/components/LogoWall";
 import { PageTransition } from "@/components/PageTransition";
 import { ProductGroups } from "@/components/ProductGroups";
