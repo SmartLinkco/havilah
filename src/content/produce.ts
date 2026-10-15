@@ -30,8 +30,8 @@ export const produceGroups: { id: string; title: string; products: ProduceItem[]
         description: "Firm white yam with a rich, earthy taste.",
         benefits: freshBenefits,
         image: {
-          src: "/images/products/yam-v2.webp",
-          alt: "A Ghanaian yam-market pile of huge, dark, bark-skinned yam tubers standing on end, one cut across to show a round white face.",
+          src: "/images/products/yam-v3.webp",
+          alt: "Two white yam tubers on a light wooden table: a large whole tuber lying diagonally behind a shorter piece cut straight across to a creamy-white face, with a small pale sprout.",
           width: 1600,
           height: 900,
         },
