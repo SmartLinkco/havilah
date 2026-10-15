@@ -72,6 +72,18 @@ export const produceGroups: { id: string; title: string; products: ProduceItem[]
           height: 720,
         },
       },
+      {
+        id: "chilli-pepper",
+        name: "Chilli Pepper",
+        description: "Slender red and green chillies with a bright, lively heat.",
+        benefits: freshBenefits,
+        image: {
+          src: "/images/products/chilli-pepper.webp",
+          alt: "A woven basket of long red and green chilli peppers on red soil, with chilli plants behind.",
+          width: 1280,
+          height: 720,
+        },
+      },
     ],
   },
   {
@@ -110,6 +122,18 @@ export const produceGroups: { id: string; title: string; products: ProduceItem[]
         image: {
           src: "/images/gallery/cassava-products.webp",
           alt: "Cassava roots beside a bowl of flour, a jar of starch and a basket of cassava chips on a wooden table.",
+          width: 1280,
+          height: 720,
+        },
+      },
+      {
+        id: "chilli-powder",
+        name: "Chilli Powder",
+        description: "Fine red chilli powder with a warm, lasting heat.",
+        benefits: processedBenefits,
+        image: {
+          src: "/images/products/chilli-powder.webp",
+          alt: "A wooden bowl of bright red chilli powder beside a few dried red chillies on a wooden table.",
           width: 1280,
           height: 720,
         },

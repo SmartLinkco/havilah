@@ -63,6 +63,18 @@ export const galleryItems: GalleryItem[] = [
     },
   },
   {
+    id: "chilli-powder",
+    category: "processing",
+    title: "Chilli powder",
+    caption: "Ground red chilli with a few dried chillies.",
+    image: {
+      src: "/images/products/chilli-powder.webp",
+      alt: "A wooden bowl of bright red chilli powder beside a few dried red chillies on a wooden table.",
+      width: 1280,
+      height: 720,
+    },
+  },
+  {
     id: "mango-orchard",
     category: "crops",
     title: "Mango orchard",
@@ -142,6 +154,18 @@ export const galleryItems: GalleryItem[] = [
     image: {
       src: "/images/products/habanero-pepper.webp",
       alt: "A basket of glossy orange and red habanero peppers in front of pepper plants.",
+      width: 1280,
+      height: 720,
+    },
+  },
+  {
+    id: "chilli-pepper",
+    category: "crops",
+    title: "Chilli pepper",
+    caption: "Fresh red and green chilli peppers.",
+    image: {
+      src: "/images/products/chilli-pepper.webp",
+      alt: "A woven basket of long red and green chilli peppers on red soil, with chilli plants behind.",
       width: 1280,
       height: 720,
     },
