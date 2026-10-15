@@ -1,9 +1,9 @@
 export const site = {
   name: "Havilah Agro Ghana Limited",
   shortName: "Havilah Agro",
-  tagline: "Rooted in Ghana, Reaching the World",
+  tagline: "Grown in Ghana, Reaching the World",
   description:
-    "Rooted in Ghana, Reaching the World. Havilah Agro Ghana Limited is a Ghanaian agribusiness that grows, processes, and supplies premium produce to buyers at home and abroad.",
+    "Grown in Ghana, Reaching the World. Havilah Agro Ghana Limited is a Ghanaian agribusiness that grows, processes, and supplies premium produce to buyers at home and abroad.",
 } as const;
 
 export type PageKey =
@@ -34,7 +34,7 @@ export const pages: Record<
     navLabel: "Home",
     title: "Havilah Agro Ghana Limited",
     description:
-      "Rooted in Ghana, Reaching the World. Havilah Agro Ghana Limited grows, processes, and supplies premium produce to buyers at home and abroad.",
+      "Grown in Ghana, Reaching the World. Havilah Agro Ghana Limited grows, processes, and supplies premium produce to buyers at home and abroad.",
     inNav: true,
     changeFrequency: "monthly",
     priority: 1,
@@ -44,7 +44,7 @@ export const pages: Record<
     navLabel: "About",
     title: "About",
     description:
-      "Havilah Agro Ghana Limited grows, processes, and supplies premium produce to buyers at home and abroad. Rooted in Ghana, Reaching the World.",
+      "Havilah Agro Ghana Limited grows, processes, and supplies premium produce to buyers at home and abroad. Grown in Ghana, Reaching the World.",
     inNav: true,
     changeFrequency: "monthly",
     priority: 0.8,
@@ -144,7 +144,7 @@ export const highlights = [
 
 export const home = {
   eyebrow: "Export farming · Ghana",
-  heroLines: ["Rooted in Ghana.", "Reaching the World"] as const,
+  heroLines: ["Grown in Ghana.", "Reaching the World"] as const,
   lede: "Havilah Agro Ghana Limited supplies sweet potatoes, mangoes, watermelon and habanero pepper. We also offer dried mangoes, sweet potato products, and cassava as flour, starch and chips — all with clear Ghanaian origin for export buyers.",
   introTitle: "A farm prepared for export conversations",
   intro:
