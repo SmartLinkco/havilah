@@ -25,6 +25,18 @@ export const produceGroups: { id: string; title: string; products: ProduceItem[]
     title: "Fresh Harvest",
     products: [
       {
+        id: "yam",
+        name: "Yam",
+        description: "Firm white yam with a rich, earthy taste.",
+        benefits: freshBenefits,
+        image: {
+          src: "/images/products/yam.webp",
+          alt: "A stack of long white yam tubers with rough brown skin on red farm soil, one cut to show the white flesh.",
+          width: 1280,
+          height: 720,
+        },
+      },
+      {
         id: "sweet-potatoes",
         name: "Sweet Potatoes",
         description: "Nutritious, naturally sweet tubers.",
