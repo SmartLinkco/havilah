@@ -279,7 +279,7 @@ export function InquiryForm({ copy, pageHeading = false }: { copy: FormCopy; pag
           <span>
             {forms.consent}{" "}
             <a href={pages.privacy.path} className="font-semibold text-green-700 underline">
-              Privacy notice
+              Privacy policy
             </a>
           </span>
         </label>

@@ -1,57 +1,82 @@
 export const privacy = {
-  eyebrow: "Privacy",
-  title: "How inquiry details are handled",
-  updated: "14 October 2026",
+  title: "Privacy policy",
+  updated: "15 October 2026",
+  lede: "This policy explains how Havilah Agro Ghana Limited handles personal information on this website, and when you send us an enquiry.",
   sections: [
     {
-      title: "Who this notice covers",
+      title: "Who we are",
+      contact: true,
       paragraphs: [
-        "This notice is for the website of Havilah Agro Ghana Limited. The site introduces the farm and collects inquiries. It does not sell produce online.",
+        "Havilah Agro Ghana Limited grows, processes and supplies produce from Ghana. We are responsible for the personal information collected through this website.",
+        "If you have a question about this policy, or about your personal information, you can reach us at:",
       ],
     },
     {
-      title: "What the forms collect",
+      title: "What information we collect",
+      contact: false,
       paragraphs: [
-        "The inquiry form and the quote form ask for your name, company, country, email, phone or WhatsApp number, the product you are interested in, an optional volume, your message, and your consent to be contacted about that inquiry.",
-        "A hidden field is included to catch automated spam. Leave it blank. If it is filled, the message is discarded.",
-        "If Cloudflare Turnstile is switched on, the form also sends a spam-check token to Cloudflare. If it is not configured, that check is skipped.",
+        "The enquiry form asks for your name, company, country, email address, phone or WhatsApp number, the produce you are interested in, an estimated volume and your message. Volume can be approximate. We also note that you agreed we may contact you about that enquiry.",
+        "When you visit the site, we receive basic technical details that come with a normal visit, such as the browser and device you use. We use these details to keep the site secure and working, including limiting repeated form messages.",
       ],
     },
     {
-      title: "How messages are sent",
+      title: "How we use it",
+      contact: false,
       paragraphs: [
-        "Messages are sent with Resend to the inbox the farm chooses. The buyer’s email is set as the reply-to address so the farm can reply directly. A short acknowledgement may be sent to the buyer from the same sender.",
-        "Until the email service is configured, the form does not pretend to have delivered the message. It asks you to use WhatsApp instead.",
+        "We use enquiry details to reply to you, prepare prices and arrange supply. We also use what we learn from visits, in general terms, to keep the site useful.",
+        "We do not sell personal information, and we do not use it to build advertising profiles.",
       ],
     },
     {
-      title: "What we do not do",
+      title: "Sharing",
+      contact: false,
       paragraphs: [
-        "Inquiry details are not sold. They are not used to build an advertising profile. The site has no customer accounts and no checkout.",
+        "We share personal information only with trusted service providers who help us run the website, deliver email and protect the form against spam. They may use it only for that work.",
+        "We may also share information when the law requires it.",
       ],
     },
     {
-      title: "Analytics",
+      title: "Third-party links",
+      contact: false,
       paragraphs: [
-        "Google Analytics 4 is optional. It loads only when a measurement ID is set for the deployment. If it is on, it receives a page view and an inquiry-submitted event after a successful send. If it is off, those scripts are not included.",
+        "WhatsApp, phone calls and Google Maps are services we do not control. When you use those links, the message, the call or the map is handled by that service under its own policy.",
       ],
     },
     {
-      title: "WhatsApp, phone and maps",
+      title: "Cookies and analytics",
+      contact: false,
       paragraphs: [
-        "WhatsApp, telephone and map links leave this site and are handled by those services. The contact page publishes a phone number, a WhatsApp link, the email address info@havilahagroghana.com, a postal address and a map.",
+        "This website does not use tracking cookies or advertising cookies. It does not show a cookie banner, because it does not place those cookies.",
       ],
     },
     {
-      title: "How long messages are kept",
+      title: "How long we keep it",
+      contact: false,
       paragraphs: [
-        "The website does not keep a database of inquiries. Delivery and retention then follow the farm’s email inbox and Resend’s own retention. A basic rate limit is kept in server memory and is cleared when the server restarts.",
+        "We keep enquiry details for as long as we need them to reply, prepare a price and supply an order, and for as long as the law requires. This website does not keep a separate database of customers.",
       ],
     },
     {
-      title: "Asking about your details",
+      title: "Security",
+      contact: false,
       paragraphs: [
-        "To ask about an inquiry you sent, use the phone, email or WhatsApp details on the contact page. This notice will be updated if the farm’s process changes.",
+        "We take reasonable care with the information you send us, including when a message is delivered by email. Please use an up-to-date browser. No way of sending information over the internet is completely secure.",
+      ],
+    },
+    {
+      title: "Your rights",
+      contact: true,
+      paragraphs: [
+        "You can ask us for a copy of the personal information we hold about you, ask us to correct it, or ask us to delete it. These rights sit alongside Ghana's Data Protection Act, 2012 (Act 843).",
+        "To make a request, contact us using the details below. We will respond to a reasonable request.",
+      ],
+    },
+    {
+      title: "Changes to this policy",
+      contact: false,
+      paragraphs: [
+        "We may update this policy. When we do, we change the date at the top of this page.",
+        "Last updated 15 October 2026.",
       ],
     },
   ],

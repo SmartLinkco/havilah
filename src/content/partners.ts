@@ -16,19 +16,19 @@ export type Certification = {
 export const partnersIntro = {
   eyebrow: "Trust",
   title: "Partners and certifications",
-  lede: "Logos and badges are withheld until Havilah Agro confirms each one in writing. An empty list is intentional.",
+  lede: "We speak directly with buyers and partners about produce from Ghana.",
 } as const;
 
 export const partners: Partner[] = [];
 
 export const partnerEmpty = {
   title: "Partner logos",
-  text: "No partner logos are displayed. A name, a short note and a logo file will be added only after the farm confirms permission to show them.",
+  text: "Partner names are shown here when we have permission to share them.",
 } as const;
 
 export const certifications: Certification[] = [];
 
 export const certificationEmpty = {
   title: "Certifications",
-  text: "No certifications are listed. Organic, export or quality badges will appear only when a real certificate is confirmed. Nothing on this site should be read as a certified claim.",
+  text: "Certificates are shown here when we hold them. Nothing on this site is a certificate unless it is named on this page.",
 } as const;
