@@ -147,6 +147,18 @@ export const galleryItems: GalleryItem[] = [
     },
   },
   {
+    id: "chilli-pepper",
+    category: "crops",
+    title: "Chilli pepper",
+    caption: "Fresh red and green chilli peppers.",
+    image: {
+      src: "/images/products/chilli-pepper.webp",
+      alt: "A woven basket of long red and green chilli peppers on red soil, with chilli plants behind.",
+      width: 1280,
+      height: 720,
+    },
+  },
+  {
     id: "cassava",
     category: "crops",
     title: "Cassava",

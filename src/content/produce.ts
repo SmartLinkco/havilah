@@ -72,6 +72,18 @@ export const produceGroups: { id: string; title: string; products: ProduceItem[]
           height: 720,
         },
       },
+      {
+        id: "chilli-pepper",
+        name: "Chilli Pepper",
+        description: "Slender red and green chillies with a bright, lively heat.",
+        benefits: freshBenefits,
+        image: {
+          src: "/images/products/chilli-pepper.webp",
+          alt: "A woven basket of long red and green chilli peppers on red soil, with chilli plants behind.",
+          width: 1280,
+          height: 720,
+        },
+      },
     ],
   },
   {

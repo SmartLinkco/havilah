@@ -145,7 +145,7 @@ export const highlights = [
 export const home = {
   eyebrow: "Export farming · Ghana",
   heroLines: ["Grown in Ghana.", "Reaching the World"] as const,
-  lede: "Havilah Agro Ghana Limited supplies sweet potatoes, mangoes, watermelon and habanero pepper. We also offer dried mangoes, sweet potato products, and cassava as flour, starch and chips — all with clear Ghanaian origin for export buyers.",
+  lede: "Havilah Agro Ghana Limited supplies sweet potatoes, mangoes, watermelon, habanero and chilli pepper. We also offer dried mangoes, sweet potato products, and cassava as flour, starch and chips — all with clear Ghanaian origin for export buyers.",
   introTitle: "A farm prepared for export conversations",
   intro:
     "Buyers, partners and investors can see how the business is set up: an export aim of 80–90%, a sustainability-led approach, and a mix of organic and inorganic methods. Figures for acreage, volume and season will be added when they are confirmed.",
