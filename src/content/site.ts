@@ -1,11 +1,9 @@
 export const site = {
   name: "Havilah Agro Ghana Limited",
   shortName: "Havilah Agro",
-  tagline: "Rooted in Ghana, Reaching the World",
+  tagline: "Grown in Ghana, Reaching the World",
   description:
-    "Rooted in Ghana, Reaching the World. Havilah Agro Ghana Limited is a Ghanaian agribusiness that grows, processes, and supplies premium produce to buyers at home and abroad.",
-  draftNotice:
-    "Draft site. Much of the wording, and the figures for acreage, volume and seasons, are still to be confirmed. The leaf-and-globe logo is the official mark.",
+    "Grown in Ghana, Reaching the World. Havilah Agro Ghana Limited is a Ghanaian agribusiness that grows, processes, and supplies premium produce to buyers at home and abroad.",
 } as const;
 
 export type PageKey =
@@ -36,7 +34,7 @@ export const pages: Record<
     navLabel: "Home",
     title: "Havilah Agro Ghana Limited",
     description:
-      "Rooted in Ghana, Reaching the World. Havilah Agro Ghana Limited grows, processes, and supplies premium produce to buyers at home and abroad.",
+      "Grown in Ghana, Reaching the World. Havilah Agro Ghana Limited grows, processes, and supplies premium produce to buyers at home and abroad.",
     inNav: true,
     changeFrequency: "monthly",
     priority: 1,
@@ -46,7 +44,7 @@ export const pages: Record<
     navLabel: "About",
     title: "About",
     description:
-      "Havilah Agro Ghana Limited grows, processes, and supplies premium produce to buyers at home and abroad. Rooted in Ghana, Reaching the World.",
+      "Havilah Agro Ghana Limited grows, processes, and supplies premium produce to buyers at home and abroad. Grown in Ghana, Reaching the World.",
     inNav: true,
     changeFrequency: "monthly",
     priority: 0.8,
@@ -74,8 +72,7 @@ export const pages: Record<
     path: "/partners",
     navLabel: "Partners",
     title: "Partners & Certifications",
-    description:
-      "Partner logos and certifications will appear only after Havilah Agro confirms them in writing. None are listed yet.",
+    description: "Havilah Agro Ghana Limited supplies produce from Ghana to buyers and partners.",
     inNav: true,
     changeFrequency: "monthly",
     priority: 0.6,
@@ -113,9 +110,9 @@ export const pages: Record<
   privacy: {
     path: "/privacy",
     navLabel: "Privacy",
-    title: "Privacy",
+    title: "Privacy policy",
     description:
-      "How Havilah Agro Ghana Limited handles inquiry form details, email delivery, and optional spam and analytics tools.",
+      "How Havilah Agro Ghana Limited handles personal information from enquiries and visits to this website.",
     inNav: false,
     changeFrequency: "yearly",
     priority: 0.3,
@@ -147,7 +144,7 @@ export const highlights = [
 
 export const home = {
   eyebrow: "Export farming · Ghana",
-  heroLines: ["Rooted in Ghana.", "Reaching the World"] as const,
+  heroLines: ["Grown in Ghana.", "Reaching the World"] as const,
   lede: "Havilah Agro Ghana Limited supplies sweet potatoes, mangoes, watermelon and habanero pepper. We also offer dried mangoes, sweet potato products, and cassava as flour, starch and chips — all with clear Ghanaian origin for export buyers.",
   introTitle: "A farm prepared for export conversations",
   intro:
@@ -155,14 +152,13 @@ export const home = {
   produceTitle: "Produce",
   produceLede: "Supplied to buyers in Ghana and exported to international markets.",
   partnersTitle: "Partners",
-  partnersLede:
-    "A logo strip will sit here after each partner has given written permission. No logos are shown before that.",
+  partnersLede: "We speak directly with buyers and partners about supply from Ghana.",
   sustainabilityTitle: "How the farm intends to work",
   sustainabilityLede:
     "Organic and inorganic methods sit in one plan. The sustainability page sets out that intention without claiming certificates the farm has not provided.",
   ctaTitle: "Start an export conversation",
   ctaText:
-    "Tell us the product, the country and an approximate volume. The inquiry goes to the farm by email, with WhatsApp as the fallback while mail is being set up.",
+    "Tell us the product, the country and an approximate volume. We will reply by email or on WhatsApp.",
   hero: {
     src: "/images/home-hero.webp",
     poster: "/videos/hero-poster.webp",

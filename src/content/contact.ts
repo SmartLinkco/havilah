@@ -43,7 +43,7 @@ export const contact = {
     { id: "instagram", label: "Instagram", href: null },
     { id: "facebook", label: "Facebook", href: null },
   ],
-  socialNote: "Social links will be added when the farm sends the profile addresses.",
+  socialNote: "",
 } as const;
 
 export const forms = {
@@ -66,9 +66,8 @@ export const forms = {
       "Thank you. Your quote request has been sent to Havilah Agro. If you need a faster reply, use WhatsApp.",
   },
   consent:
-    "I agree that Havilah Agro may contact me about this inquiry, and I have read the privacy notice.",
-  fallback:
-    "We could not send this by email yet. Please message us on WhatsApp instead.",
+    "I agree that Havilah Agro may contact me about this inquiry, and I have read the privacy policy.",
+  fallback: "We could not send this by email. Please message us on WhatsApp instead.",
   rateLimit:
     "Too many messages from this connection. Please wait a few minutes, or message us on WhatsApp.",
   sendFailed:

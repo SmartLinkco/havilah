@@ -84,8 +84,8 @@ export const produceGroups: { id: string; title: string; products: ProduceItem[]
         description: "Sun-ripened mangoes preserved for longer shelf life and easy export.",
         benefits: processedBenefits,
         image: {
-          src: "/images/products/mangoes.webp",
-          alt: "Ripe mangoes with red and yellow skin packed in a wooden crate under a mango tree.",
+          src: "/images/gallery/dried-mangoes.webp",
+          alt: "Golden dried mango slices spread across mesh drying racks, with a paper bag of pieces in the foreground.",
           width: 1280,
           height: 720,
         },
@@ -96,8 +96,8 @@ export const produceGroups: { id: string; title: string; products: ProduceItem[]
         description: "Chips, flour, and puree that last longer and travel better.",
         benefits: processedBenefits,
         image: {
-          src: "/images/products/sweet-potatoes.webp",
-          alt: "A woven basket of reddish-brown sweet potatoes with soil on the skins, sitting on red earth in a green field.",
+          src: "/images/gallery/sweet-potato-products.webp",
+          alt: "A bowl of sweet potato chips, a jar of flour and a bowl of puree beside whole sweet potatoes on a wooden table.",
           width: 1280,
           height: 720,
         },
@@ -108,8 +108,8 @@ export const produceGroups: { id: string; title: string; products: ProduceItem[]
         description: "A versatile staple, supplied as flour, starch, and chips.",
         benefits: processedBenefits,
         image: {
-          src: "/images/products/cassava.webp",
-          alt: "Pale cassava roots with rough brown skin stacked in a wooden crate on red soil, with leafy cassava plants behind.",
+          src: "/images/gallery/cassava-products.webp",
+          alt: "Cassava roots beside a bowl of flour, a jar of starch and a basket of cassava chips on a wooden table.",
           width: 1280,
           height: 720,
         },
