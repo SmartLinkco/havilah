@@ -32,7 +32,7 @@ export const galleryItems: GalleryItem[] = [
     title: "Yam",
     caption: "Fresh white yam from the farm.",
     image: {
-      src: "/images/products/yam.webp",
+      src: "/images/products/yam-v2.webp",
       alt: "A Ghanaian yam-market pile of huge, dark, bark-skinned yam tubers standing on end, one cut across to show a round white face.",
       width: 1600,
       height: 900,
