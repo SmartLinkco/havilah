@@ -72,7 +72,7 @@ export default function HomePage() {
       <section className="bg-white" aria-labelledby="produce-heading">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
           <Reveal>
-            <SectionHeading id="produce-heading" eyebrow="Produce" title={home.produceTitle} lede={home.produceLede} />
+            <SectionHeading id="produce-heading" title={home.produceTitle} lede={home.produceLede} />
           </Reveal>
           <div className="mt-10">
             <ProductGroups heading="h3" />
@@ -85,7 +85,7 @@ export default function HomePage() {
       {partners.length > 0 ? (
       <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8" aria-labelledby="partners-heading">
         <Reveal>
-          <SectionHeading id="partners-heading" eyebrow="Partners" title={home.partnersTitle} lede={home.partnersLede} />
+          <SectionHeading id="partners-heading" title={home.partnersTitle} lede={home.partnersLede} />
         </Reveal>
         <Reveal className="mt-8" delay={80}>
           <LogoWall />

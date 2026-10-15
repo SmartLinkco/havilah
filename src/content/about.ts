@@ -1,5 +1,4 @@
 export const about = {
-  eyebrow: "About",
   title: "About Us",
   statement:
     "Havilah Agro Ghana Limited is a Ghanaian agribusiness that grows, processes, and supplies premium produce to buyers at home and abroad. We work alongside local farmers, giving them the inputs, guidance, and standards they need, so that every harvest meets international quality and earns its full value. Every step from farm to market is traceable, and the rewards are shared: more jobs, stronger farming communities, and foreign exchange for Ghana.",

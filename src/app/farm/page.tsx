@@ -16,7 +16,7 @@ export default function FarmPage() {
   return (
     <PageTransition>
       <LegacyEnquiryRedirect hashes={["#quote"]} />
-      <PageHero eyebrow={produceIntro.eyebrow} title={produceIntro.title} lede={produceIntro.lede} />
+      <PageHero title={produceIntro.title} lede={produceIntro.lede} />
       <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
         <ProductGroups />
       </section>

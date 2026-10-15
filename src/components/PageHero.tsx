@@ -6,7 +6,7 @@ export function PageHero({
   lead,
   lede,
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   lead?: string;
   lede: string;
@@ -16,7 +16,7 @@ export function PageHero({
   return (
     <section className="border-b border-green-100 bg-green-100">
       <div className="hero-enter mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
-        <p className="eyebrow">{eyebrow}</p>
+        {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
         <h1 className="mt-3 max-w-3xl font-heading text-4xl font-semibold tracking-tight text-green-900 sm:text-5xl">
           {title}
         </h1>
