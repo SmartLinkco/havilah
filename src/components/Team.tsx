@@ -97,7 +97,7 @@ export function FounderTeaser() {
             <p className="mt-1 text-sm font-semibold tracking-wide text-soil-700">{founder.role}</p>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink">{founder.teaser}</p>
             <Link href={`${pages.about.path}#${founder.id}`} className="btn btn-secondary mt-6">
-              {founder.teaserTitle}
+              Read full bio
             </Link>
           </div>
         </div>
