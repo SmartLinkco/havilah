@@ -40,7 +40,10 @@ export default function HomePage() {
             </h1>
             <div className="mt-4 h-0.5 w-16 bg-gold-500" />
             {visitorCopy(home.lede) ? (
-              <p lang="en" className="mt-5 max-w-xl text-justify text-lg leading-relaxed text-white/90 hyphens-auto [text-align-last:left]">
+              <p
+                className="mt-5 max-w-xl text-justify text-lg leading-relaxed text-white/90 hyphens-none break-normal [text-align-last:left]"
+                style={{ WebkitHyphens: "none" }}
+              >
                 {visitorCopy(home.lede)}
               </p>
             ) : null}
