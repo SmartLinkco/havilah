@@ -50,7 +50,7 @@ export const forms = {
   inquiry: {
     id: "inquiry",
     intent: "inquiry" as const,
-    title: "Send an enquiry",
+    title: "Send enquiry",
     lede: "Tell us what you need and we'll get back to you with pricing and availability. Volumes can be approximate.",
     submit: "Send enquiry",
     success:
@@ -59,7 +59,7 @@ export const forms = {
   quote: {
     id: "quote",
     intent: "quote" as const,
-    title: "Send an enquiry",
+    title: "Send enquiry",
     lede: "Tell us what you need and we'll get back to you with pricing and availability. Volumes can be approximate.",
     submit: "Send enquiry",
     success:

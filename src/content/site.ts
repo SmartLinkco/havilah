@@ -100,7 +100,7 @@ export const pages: Record<
   enquiry: {
     path: "/enquiry",
     navLabel: "Enquiry",
-    title: "Send an enquiry",
+    title: "Send enquiry",
     description:
       "Tell us what you need and we'll get back to you with pricing and availability. Volumes can be approximate.",
     inNav: false,
