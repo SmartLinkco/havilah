@@ -37,7 +37,7 @@ npm run dev
 | --- | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | No | Canonical origin for metadata, the sitemap and Open Graph. Falls back to `https://$VERCEL_URL`, then `http://localhost:3000`. |
 | `RESEND_API_KEY` | Yes, to send mail | Resend API key. |
-| `INQUIRY_TO_EMAIL` | Yes, to send mail | Inbox that receives inquiries and quote requests. Default: `info@havilahagroghana.com`. |
+| `INQUIRY_TO_EMAIL` | Yes, to send mail | Inboxes that receive inquiries and quote requests. Separate several addresses with commas, for example `info@havilahagroghana.com,Kwame@havilahagroghana.com`. Semicolons and extra spaces are accepted. |
 | `INQUIRY_FROM_EMAIL` | Yes, to send mail | Verified From address, for example `Havilah Agro <inquiries@yourdomain.com>`. |
 | `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | No | Shows the Cloudflare Turnstile widget when set. |
 | `TURNSTILE_SECRET_KEY` | No | Verifies the Turnstile token. If unset, the server skips the check. |
@@ -45,7 +45,7 @@ npm run dev
 
 If `RESEND_API_KEY`, `INQUIRY_TO_EMAIL` or `INQUIRY_FROM_EMAIL` is missing, the form does not claim success. It returns a message that points the buyer to WhatsApp.
 
-The route also sets Reply-To to the buyer, sends a short acknowledgement back to them, rejects a filled honeypot, validates on the server, and rate-limits each IP to 5 requests in 15 minutes. The limit is kept in memory on that server instance.
+The route also sets Reply-To to the buyer, sends a short acknowledgement back to them with Reply-To set to those inboxes, rejects a filled honeypot, validates on the server, and rate-limits each IP to 5 requests in 15 minutes. The limit is kept in memory on that server instance.
 
 Verify the sending domain in Resend (SPF, DKIM, and a DMARC record) before launch so mail is less likely to be treated as spam.
 
