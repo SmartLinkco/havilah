@@ -1,6 +1,17 @@
 import { contact } from "@/content/contact";
 import { intentLabel, interestLabel, type InquiryInput } from "@/lib/inquiry";
 
+export function formatInquiryFrom(value: string): string {
+  const trimmed = value.trim().replace(/^['"]+|['"]+$/g, "");
+  const named = trimmed.match(/^(.*?)\s*<\s*([^>\s]+)\s*>\s*$/);
+  if (!named) return trimmed;
+  const email = named[2].trim();
+  const name = named[1].trim().replace(/^['"]+|['"]+$/g, "");
+  if (!name) return email;
+  const quoted = /[\s"<>]/.test(name) ? `"${name.replaceAll('"', "")}"` : name;
+  return `${quoted} <${email}>`;
+}
+
 function escapeHtml(value: string): string {
   return value
     .replaceAll("&", "&amp;")
