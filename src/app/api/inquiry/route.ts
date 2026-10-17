@@ -8,6 +8,7 @@ import {
   inquiryHtml,
   inquirySubject,
   inquiryText,
+  parseInquiryRecipients,
 } from "@/lib/mail";
 import { clientIp, rateLimit } from "@/lib/rate-limit";
 import { verifyTurnstile } from "@/lib/turnstile";
@@ -105,10 +106,10 @@ export async function POST(request: Request) {
   }
 
   const apiKey = process.env.RESEND_API_KEY?.trim();
-  const to = process.env.INQUIRY_TO_EMAIL?.trim();
+  const recipients = parseInquiryRecipients(process.env.INQUIRY_TO_EMAIL ?? "");
   const from = formatInquiryFrom(process.env.INQUIRY_FROM_EMAIL ?? "");
 
-  if (!apiKey || !to || !from) {
+  if (!apiKey || recipients.length === 0 || !from) {
     return json(
       {
         ok: false,
@@ -126,7 +127,7 @@ export async function POST(request: Request) {
   try {
     const sent = await resend.emails.send({
       from,
-      to: [to],
+      to: recipients,
       replyTo: data.email,
       subject: inquirySubject(data),
       text: inquiryText(data),
@@ -149,7 +150,7 @@ export async function POST(request: Request) {
     const acknowledgement = await resend.emails.send({
       from,
       to: [data.email],
-      replyTo: to,
+      replyTo: recipients,
       subject: `We received your ${data.intent === "quote" ? "quote request" : "inquiry"} — Havilah Agro`,
       text: acknowledgementText(data),
       html: acknowledgementHtml(data),

@@ -1,6 +1,8 @@
 import { contact } from "@/content/contact";
 import { intentLabel, interestLabel, type InquiryInput } from "@/lib/inquiry";
 
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export function formatInquiryFrom(value: string): string {
   const trimmed = value.trim().replace(/^['"]+|['"]+$/g, "");
   const named = trimmed.match(/^(.*?)\s*<\s*([^>\s]+)\s*>\s*$/);
@@ -10,6 +12,33 @@ export function formatInquiryFrom(value: string): string {
   if (!name) return email;
   const quoted = /[\s"<>]/.test(name) ? `"${name.replaceAll('"', "")}"` : name;
   return `${quoted} <${email}>`;
+}
+
+export function parseInquiryRecipients(value: string): string[] {
+  const seen = new Set<string>();
+  const recipients: string[] = [];
+  let dropped = 0;
+
+  for (const part of value.split(/[,;]+/)) {
+    const address = part.trim();
+    if (!address) continue;
+    if (!emailPattern.test(address)) {
+      dropped += 1;
+      continue;
+    }
+    const key = address.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    recipients.push(address);
+  }
+
+  if (dropped > 0) {
+    console.warn(
+      `Dropped ${dropped} invalid inquiry recipient ${dropped === 1 ? "address" : "addresses"}.`,
+    );
+  }
+
+  return recipients;
 }
 
 function escapeHtml(value: string): string {
