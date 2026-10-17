@@ -1,5 +1,9 @@
-export async function verifyTurnstile(secret: string, token: string, ip: string): Promise<boolean> {
-  if (!token) return false;
+export async function verifyTurnstile(
+  secret: string,
+  token: string,
+  ip: string,
+): Promise<{ ok: true } | { ok: false; reason: string }> {
+  if (!token) return { ok: false, reason: "missing-token" };
 
   const body = new URLSearchParams({ secret, response: token });
   if (ip && ip !== "unknown") body.set("remoteip", ip);
@@ -10,8 +14,10 @@ export async function verifyTurnstile(secret: string, token: string, ip: string)
     body,
   });
 
-  if (!response.ok) return false;
+  if (!response.ok) return { ok: false, reason: `siteverify-${response.status}` };
 
-  const data = (await response.json()) as { success?: boolean };
-  return data.success === true;
+  const data = (await response.json()) as { success?: boolean; "error-codes"?: string[] };
+  if (data.success === true) return { ok: true };
+  const codes = (data["error-codes"] ?? ["rejected"]).filter((code) => code.length > 0).join(",");
+  return { ok: false, reason: codes || "rejected" };
 }

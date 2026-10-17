@@ -4,6 +4,7 @@ import { validateInquiry } from "@/lib/inquiry";
 import {
   acknowledgementHtml,
   acknowledgementText,
+  formatInquiryFrom,
   inquiryHtml,
   inquirySubject,
   inquiryText,
@@ -13,6 +14,16 @@ import { verifyTurnstile } from "@/lib/turnstile";
 
 function json(body: unknown, status: number) {
   return Response.json(body, { status });
+}
+
+function resendErrorDetails(error: unknown) {
+  if (!error || typeof error !== "object") return { name: "Error" };
+  const record = error as { name?: unknown; message?: unknown; statusCode?: unknown };
+  return {
+    name: typeof record.name === "string" ? record.name : "Error",
+    statusCode: typeof record.statusCode === "number" ? record.statusCode : undefined,
+    message: typeof record.message === "string" ? record.message : undefined,
+  };
 }
 
 export async function POST(request: Request) {
@@ -78,8 +89,9 @@ export async function POST(request: Request) {
 
   const turnstileSecret = process.env.TURNSTILE_SECRET_KEY?.trim();
   if (turnstileSecret) {
-    const passed = await verifyTurnstile(turnstileSecret, parsed.data.turnstileToken, ip);
-    if (!passed) {
+    const turnstile = await verifyTurnstile(turnstileSecret, parsed.data.turnstileToken, ip);
+    if (!turnstile.ok) {
+      console.error("Turnstile check failed", turnstile.reason);
       return json(
         {
           ok: false,
@@ -94,7 +106,7 @@ export async function POST(request: Request) {
 
   const apiKey = process.env.RESEND_API_KEY?.trim();
   const to = process.env.INQUIRY_TO_EMAIL?.trim();
-  const from = process.env.INQUIRY_FROM_EMAIL?.trim();
+  const from = formatInquiryFrom(process.env.INQUIRY_FROM_EMAIL ?? "");
 
   if (!apiKey || !to || !from) {
     return json(
@@ -122,7 +134,7 @@ export async function POST(request: Request) {
     });
 
     if (sent.error) {
-      console.error("Inquiry email failed", sent.error.name);
+      console.error("Inquiry email failed", resendErrorDetails(sent.error));
       return json(
         {
           ok: false,
@@ -144,10 +156,10 @@ export async function POST(request: Request) {
     });
 
     if (acknowledgement.error) {
-      console.error("Acknowledgement email failed", acknowledgement.error.name);
+      console.error("Acknowledgement email failed", resendErrorDetails(acknowledgement.error));
     }
   } catch (error) {
-    console.error("Inquiry email threw", error instanceof Error ? error.name : "Error");
+    console.error("Inquiry email threw", resendErrorDetails(error));
     return json(
       {
         ok: false,

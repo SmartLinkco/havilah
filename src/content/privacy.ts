@@ -1,6 +1,6 @@
 export const privacy = {
   title: "Privacy policy",
-  updated: "15 October 2026",
+  updated: "16 October 2026",
   lede: "This policy explains how Havilah Agro Ghana Limited handles personal information on this website, and when you send us an enquiry.",
   sections: [
     {
@@ -46,7 +46,7 @@ export const privacy = {
       title: "Cookies and analytics",
       contact: false,
       paragraphs: [
-        "This website does not use tracking cookies or advertising cookies. It does not show a cookie banner, because it does not place those cookies.",
+        "We use Google Analytics to understand how people visit this website, including which pages are opened and the kind of device used. Google Analytics may place a cookie in your browser for that purpose. We do not use advertising cookies.",
       ],
     },
     {
@@ -76,7 +76,7 @@ export const privacy = {
       contact: false,
       paragraphs: [
         "We may update this policy. When we do, we change the date at the top of this page.",
-        "Last updated 15 October 2026.",
+        "Last updated 16 October 2026.",
       ],
     },
   ],
