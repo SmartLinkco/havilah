@@ -46,4 +46,11 @@ export const directors: TeamMember[] = [
     bio: "Director, Havilah Agro Ghana Limited.",
     portrait: { kind: "initials", initials: "SS" },
   },
+  {
+    id: "malorfa-aryee",
+    name: "Malorfa Aryee",
+    role: "Public Relations, Havilah Agro Ghana Limited",
+    bio: "",
+    portrait: { kind: "initials", initials: "MA" },
+  },
 ];

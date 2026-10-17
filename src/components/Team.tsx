@@ -64,7 +64,7 @@ export function TeamSection() {
             </div>
           </Reveal>
         </div>
-        <ul className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-2">
+        <ul className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-3">
           {directors.map((member, index) => (
             <li key={member.id}>
               <Reveal delay={index * 70} className="h-full">
@@ -72,7 +72,7 @@ export function TeamSection() {
                   <TeamPortrait portrait={member.portrait} />
                   <h3 className="mt-5 font-heading text-xl font-semibold text-green-900">{member.name}</h3>
                   <p className="mt-1 text-sm font-semibold tracking-wide text-soil-700">{member.role}</p>
-                  <p className="mt-4 leading-relaxed text-ink">{member.bio}</p>
+                  {member.bio ? <p className="mt-4 leading-relaxed text-ink">{member.bio}</p> : null}
                 </article>
               </Reveal>
             </li>
