@@ -4,6 +4,7 @@ import { validateInquiry } from "@/lib/inquiry";
 import {
   acknowledgementHtml,
   acknowledgementText,
+  confirmationSubject,
   formatInquiryFrom,
   inquiryHtml,
   inquirySubject,
@@ -123,6 +124,7 @@ export async function POST(request: Request) {
 
   const resend = new Resend(apiKey);
   const data = parsed.data;
+  const submittedAt = new Date();
 
   try {
     const sent = await resend.emails.send({
@@ -130,8 +132,8 @@ export async function POST(request: Request) {
       to: recipients,
       replyTo: data.email,
       subject: inquirySubject(data),
-      text: inquiryText(data),
-      html: inquiryHtml(data),
+      text: inquiryText(data, submittedAt),
+      html: inquiryHtml(data, submittedAt),
     });
 
     if (sent.error) {
@@ -151,9 +153,9 @@ export async function POST(request: Request) {
       from,
       to: [data.email],
       replyTo: recipients,
-      subject: `We received your ${data.intent === "quote" ? "quote request" : "inquiry"} — Havilah Agro`,
-      text: acknowledgementText(data),
-      html: acknowledgementHtml(data),
+      subject: confirmationSubject,
+      text: acknowledgementText(data, submittedAt),
+      html: acknowledgementHtml(data, submittedAt),
     });
 
     if (acknowledgement.error) {
